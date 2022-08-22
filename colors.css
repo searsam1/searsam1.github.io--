@@ -1,0 +1,142 @@
+/* 
+font-family: 'Comfortaa', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Silkscreen', cursive; 
+*/
+
+@keyframes rotation{
+  from {color: beige; font-size: 10px; opacity: 0%; transform: rotate(0); right: 50%;}
+  to {color: black; font-size: 100px;opacity: 100%; transform: rotate(720deg); right: 0%;}
+}
+
+@keyframes floatText{
+    from {opacity: 0%; right: 100%;}
+    to {opacity: 100%; right: 0%;}
+    
+  }
+@keyframes colorFloat{
+    from {color: white;}
+    to {color: black;}
+    
+  }
+
+  @keyframes colorHover{
+    from {color: var(--aColor-beige-white);}
+    to {color: black;}
+    
+  }  
+@keyframes zoomIn {
+  from {opacity: 0%;}
+    to {opacity: 100%;}
+  
+}
+
+ :root {
+    --aColor-red-dark: rgb(133, 0, 6);
+    --aColor-red-orange: rgb(207, 76, 54);
+    --aColor-red: rgb(169, 15, 17);
+    --aColor-beige-white: rgb(255, 220, 182);
+  }
+
+#Experience{
+    animation: zoomIn 2s;
+}
+
+
+#mso{
+  color: black;
+  animation: colorHover 2s;
+  font-size: 40px;
+  vertical-align: bottom;
+}
+
+#token{
+  position: relative;
+  animation: rotation 5s 1;
+  margin-top: 20px;
+}  
+
+.container{
+    margin-top: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    background-color: var(--aColor-beige-white);
+    color: var(--aColor-red-dark);
+    border: 2px solid var(--aColor-red-orange);
+    animation: floatText 1s none 0s 1;
+    position: relative;
+}
+
+
+
+@keyframes expand{
+  from {width: 50%; padding: 0px; }
+  to {width: 60%; padding: 20px; }
+  
+}
+
+@keyframes flip{
+  from {transform: rotate(0deg); }
+  to {transform: rotate(90deg); }
+}
+
+@keyframes flip_r{
+  from {transform: rotate(90deg); }
+  to {transform: rotate(0deg); }
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+
+button:focus {
+  outline: none;
+}
+
+.box{
+  padding: 20px;
+  animation: expand 1s none 0s 1;
+  background-color: var(--aColor-beige-white);
+  width: 60%;
+  color: black;
+  font-family: 'Lato', sans-serif;
+  font-size: x-large;
+  
+  margin-bottom: 20px;
+  /* This is not good */
+  /* Invisible border so animations arent fucked up */
+  border: 1px solid var(--aColor-beige-white); 
+}
+
+li {
+  text-align: left;
+  margin: 15px;
+  font-size: 20px;
+}
+
+.delay1 {
+  animation: floatText 2s none 0s 1;
+}
+.delay2 {
+  animation: floatText 2.5s none 0s 1;
+}
+.delay3 {
+  animation: floatText 3s none 0s 1;
+}
+.delay4 {
+  animation: floatText 3.5s none 0s 1;
+}
+.delay5 {
+  animation: floatText 4s none 0s 1;
+}
+.delay6 {
+  animation: floatText 4.5s none 0s 1;
+}
+
+body{
+    background-color: blanchedalmond;
+}
