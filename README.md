@@ -1,1 +1,1 @@
-[link](alecscripts.com)
+[link](https://alecscripts.com)
