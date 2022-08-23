@@ -1,1 +1,1 @@
-[ # My Website](https://alecscripts.com)
+[alecscripts.com](https://alecscripts.com)
