@@ -81,12 +81,27 @@ p{
     animation: floatText 1s none 0s 1;
     position: relative;
 }
-.container-no-animation
+
+
+@media only screen and (min-width: 900px) {
+  .container-no-animation {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .container-no-animation {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+
+ .container-no-animation
 {
   margin-top: 20px;
   text-align: left;
-  margin-left: 30%;
-  margin-right: 30%;
+
   font-size: 20px;
   color: var(--aColor-red-dark);
   /* border: 2px solid var(--aColor-red-orange); */
@@ -128,7 +143,7 @@ button {
 #menu > p > a{
   color: var(--aColor-red-dark);
   padding: 10px;
-  font-size: 15px;
+  font-size: 16px;
 
 }
 #menu > p > a:hover{
