@@ -6,6 +6,15 @@ font-family: 'Lato', sans-serif;
 font-family: 'Silkscreen', cursive; 
 */
 
+
+.Lato{
+  font-family: 'Lato', sans-serif;
+}
+
+.Comfortaa{
+  font-family: 'Comfortaa', cursive;
+}
+
 @keyframes rotation{
   from {color: beige; font-size: 10px; opacity: 0%; transform: rotate(0); right: 50%;}
   to {color: black; font-size: 100px;opacity: 100%; transform: rotate(720deg); right: 0%;}
@@ -43,7 +52,14 @@ font-family: 'Silkscreen', cursive;
 #Experience{
     animation: zoomIn 2s;
 }
+code{
+  background-color: rgb(0,0,0,.05);
+  color: inherit;
+}
 
+.nav-link{
+  color: black;
+}
 
 #mso{
   color: black;
@@ -52,7 +68,9 @@ font-family: 'Silkscreen', cursive;
   vertical-align: bottom;
 }
 
-
+p{
+  color: black;
+}
 .container{
     margin-top: 10px;
     font-family: 'Lato', sans-serif;
@@ -62,6 +80,16 @@ font-family: 'Silkscreen', cursive;
     /* border: 2px solid var(--aColor-red-orange); */
     animation: floatText 1s none 0s 1;
     position: relative;
+}
+.container-no-animation
+{
+  margin-top: 20px;
+  text-align: left;
+  margin-left: 30%;
+  margin-right: 30%;
+  font-size: 20px;
+  color: var(--aColor-red-dark);
+  /* border: 2px solid var(--aColor-red-orange); */
 }
 
 td {
@@ -90,7 +118,34 @@ button {
   background: none;
   border: none;
 }
+#menu{
+  padding: 10px;
+  position: absolute;   
+  background-color: rgb(255,255,255,.97);
+  color: var(--aColor-red-dark);
+}
 
+#menu > p > a{
+  color: var(--aColor-red-dark);
+  padding: 10px;
+  font-size: 15px;
+
+}
+#menu > p > a:hover{
+  color: black;
+  text-decoration: none;
+  background-color: rgb(1,1,1,.05);
+  
+}
+#menu > p > a::before{
+  content: " ";
+  padding-right: 10px;
+  
+}
+#menu > p > a::after{
+  content: " ";
+  padding-left: 10px;
+}
 
 button:focus {
   outline: none;
@@ -125,4 +180,5 @@ li {
 
 body{
     background-color: rgb(1,1,1,.01);
+    font-size: 25px;
 }

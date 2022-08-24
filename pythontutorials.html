@@ -19,11 +19,84 @@
     
     <title>Python Tutorials</title>
 
-    
+
+    <div>
+        <nav class="navbar navbar-expand bg-light Lato">
+            <nav class="nav-link">
+                Python Tutorials
+            </nav>
+            
+            <div id="lt"> >  </div>
+            <nav class="nav-link">
+                
+                <button onclick="show('menu','lt')">
+                    Functions
+                </button>
+                <div id="menu" style="display: none;">
+                     <p><a href="#basicSyntax">Basic Syntax</a></p>
+                     <p><a href="#args">Arguments and Input</a></p>
+                     
+                </div>
+                
+            </nav>
+        </nav>
+    </div>
 
   </head>
 
 
+
+
+<body>
+
+    <div class="container-no-animation Lato">
+        <h3>Functions</h3>
+        <hr>
+        <p>
+            Functions are important to learn first
+            so one can practice challenges that 
+            return values. That way, tests can be
+            easy through assertion.
+        </p>
+        <h5 id="basicSyntax">Functions - Basic Syntax</h5>
+        <hr>
+        <p>
+            Functions are defined with the <code>def</code> keyword 
+            followed by the name of the function with parenthesis and a semi colon. 
+            <br>
+            <code> def foo(): </code>
+            <br>
+            <code> def foo_bar(): </code>
+            <br>
+            The body of the function comes after the semi colon, a <code>\n</code> (newline) and a tab.
+            <br>
+            <code><pre>def foo():
+    print("Hello World!")</pre></code>
+        </p>
+    </p>
+    <h5 id="args">Functions - Arguments and Inputs to the Function</h5>
+    <hr>
+    <p>
+        <p>
+            <code><pre>def print_argument(argument):
+    print(argument))</pre></code>
+        </p>
+        <p>
+            Arguments are objects that are passed into a function, like <code>print_argument(argument)</code> above.
+        </p>
+        <p>
+            Python is dynamically typed, meaning the one writing the function does not need to 
+            supply the argument's type like in static languages. There is, however, the option 
+            to *add types by using a colon after the argument and the type.
+        </p>
+        <p>
+            <code><pre>def foo( arg: str ): # Argument arg using type string.
+    print("Hello World!")</pre></code>
+        </p>
+    </div>
+    
+    <div class="container-no-animation Lato">
+    </div>
 
     <!-- Optional JavaScript -->
     <script src="mainJs.js"></script>
