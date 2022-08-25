@@ -1,11 +1,50 @@
-/* 
-font-family: 'Comfortaa', cursive;
-font-family: 'Dancing Script', cursive;
-font-family: 'Indie Flower', cursive;
-font-family: 'Lato', sans-serif;
-font-family: 'Silkscreen', cursive; 
-*/
+@media only screen and (min-width: 900px) {
+  .container-no-animation {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
 
+@media only screen and (max-width: 900px) {
+  .container-no-animation {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+*{
+  scroll-padding-top: 70px;
+  transition: all .4s;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: rgb(1,1,1,.01);
+  font-size: 16px;
+}pre{
+  background-color: rgb(0,0,0,.03);
+  font-size: 16px;
+  padding: 10px;
+  
+}
+code{
+  color: var(--aColor-red-dark);
+}
+h5{border-bottom: 1px solid rgb(0,0,0,.1);}
+p{
+  color: black;
+  font-size: 16px;
+}
+footer > a {
+  color: grey;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif; 
+}
+button {
+  background: none;
+  border: none;
+}
+button:focus {outline: none;}
 
 .Lato{
   font-family: 'Lato', sans-serif;
@@ -15,7 +54,67 @@ font-family: 'Silkscreen', cursive;
   font-family: 'Comfortaa', cursive;
 }
 
-@keyframes rotation{
+:root {
+    --aColor-red-dark: rgb(133, 0, 6);
+    --aColor-red-orange: rgb(207, 76, 54);
+    --aColor-red: rgb(169, 15, 17);
+    --aColor-beige-white: rgb(255, 220, 182);
+  }
+
+.nav-link a{
+  color: grey;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+}
+
+.container{
+    margin-top: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    background-color: white;
+    color: var(--aColor-red-dark);
+    /* border: 2px solid var(--aColor-red-orange); */
+    position: relative;
+}
+
+ .container-no-animation
+{
+  margin-top: 20px;
+  text-align: left;
+
+  font-size: 20px;
+  color: var(--aColor-red-dark);
+  /* border: 2px solid var(--aColor-red-orange); */
+}
+
+#menu{
+  padding: 10px;
+  position: absolute;   
+  background-color: rgb(248, 248, 248);
+  color: var(--aColor-red-dark);
+  box-shadow: 1px 1px 1px 1px rgb(120, 120, 120);
+  
+}
+
+#menu > p > a{
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#menu h5{padding: 10px;}
+
+/* 
+font-family: 'Comfortaa', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Silkscreen', cursive; 
+*/
+
+/* ------- */
+
+/* @keyframes rotation{
   from {color: beige; font-size: 10px; opacity: 0%; transform: rotate(0); right: 50%;}
   to {color: black; font-size: 100px;opacity: 100%; transform: rotate(720deg); right: 0%;}
 }
@@ -40,182 +139,4 @@ font-family: 'Silkscreen', cursive;
   from {opacity: 0%;}
     to {opacity: 100%;}
   
-}
-
- :root {
-    --aColor-red-dark: rgb(133, 0, 6);
-    --aColor-red-orange: rgb(207, 76, 54);
-    --aColor-red: rgb(169, 15, 17);
-    --aColor-beige-white: rgb(255, 220, 182);
-  }
-
-
-code {
-  color: var(--aColor-red-dark);
-}
-pre{
-  background-color: rgb(0,0,0,.03);
-  font-size: 16px;
-  padding: 10px;
-  
-}
-
-
-
-.nav-link a{
-  color: grey;
-  font-size: 18px;
-  font-family: 'Lato', sans-serif;
-}
-
-#mso{
-  color: black;
-  font-size: 40px;
-  vertical-align: bottom;
-}
-
-p{
-  color: black;
-}
-.container{
-    margin-top: 10px;
-    font-family: 'Lato', sans-serif;
-    font-size: 30px;
-    background-color: white;
-    color: var(--aColor-red-dark);
-    /* border: 2px solid var(--aColor-red-orange); */
-    position: relative;
-}
-
-
-@media only screen and (min-width: 900px) {
-  .container-no-animation {
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .container-no-animation {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-}
-
-
-footer > a {
-  color: grey;
-  font-size: 18px;
-  font-family: 'Lato', sans-serif;
-  
-}
-footer > a:hover {
-  color: white;
-}
-
- .container-no-animation
-{
-  margin-top: 20px;
-  text-align: left;
-
-  font-size: 20px;
-  color: var(--aColor-red-dark);
-  /* border: 2px solid var(--aColor-red-orange); */
-}
-
-td {
-  padding: 10px;
-  border-right: 1px solid rgb(1,1,1,.1);
-  
-}
-
-@keyframes expand{
-  from {width: 50%; padding: 0px; }
-  to {width: 60%; padding: 20px; }
-  
-}
-
-@keyframes flip{
-  from {transform: rotate(0deg); }
-  to {transform: rotate(90deg); }
-}
-
-@keyframes flip_r{
-  from {transform: rotate(90deg); }
-  to {transform: rotate(0deg); }
-}
-
-button {
-  background: none;
-  border: none;
-}
-*{
-  scroll-padding-top: 70px;
-}
-#menu{
-  padding: 10px;
-  position: absolute;   
-  background-color: rgb(248, 248, 248);
-  color: var(--aColor-red-dark);
-  box-shadow: 1px 1px 1px 1px rgb(120, 120, 120);
-  
-}
-
-
-
-
-
-*{
-  transition: all .4s;
-
-  scroll-behavior: smooth;
-}
-
-h5{
-  border-bottom: 1px solid rgb(0,0,0,.1);
-}
-
-
-p {
-  font-size: 16px;
-}
-
-#menu > p > a{
-  color: var(--aColor-red-dark);
-  padding: 10px;
-  font-size: 16px;
-}
-#menu h5{
- padding: 10px; 
-}
-#menu > p > a:hover{
-  color: black;
-  text-decoration: none;
-  
-}
-#menu > p > a::before{
-  content: " ";
-  padding-right: 10px;
-  
-}
-#menu > p > a::after{
-  content: " ";
-  padding-left: 10px;
-}
-
-button:focus {
-  outline: none;
-}
-
-
-li {
-  text-align: left;
-  margin: 15px;
-  font-size: 20px;
-  padding-bottom: 10px;
-}
-
-
-body{
-    background-color: rgb(1,1,1,.01);
-    font-size: 16px;
-}
+} */
