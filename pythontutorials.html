@@ -20,7 +20,7 @@
     <title>Python Tutorials</title>
 
 
-    <div>
+    <div class="sticky-top">
         <nav class="navbar navbar-expand bg-light Lato">
             <nav class="nav-link">
                 Python Tutorials
@@ -35,6 +35,7 @@
                 <div id="menu" style="display: none;">
                      <p><a href="#basicSyntax">Basic Syntax</a></p>
                      <p><a href="#args">Arguments and Input</a></p>
+                     <p><a href="#multiple-args">Multiple Positional Arguments</a></p>
                      
                 </div>
                 
@@ -74,6 +75,7 @@
     print("Hello World!")</pre></code>
         </p>
     </p>
+
     <h5 id="args">Functions - Arguments and Inputs to the Function</h5>
     <hr>
     <p>
@@ -90,10 +92,57 @@
             to *add types by using a colon after the argument and the type.
         </p>
         <p>
-            <code><pre>def foo( arg: str ): # Argument arg using type string.
+            <code><pre># Argument arg using type string.
+def foo( arg: str ):     
     print("Hello World!")</pre></code>
         </p>
+
+<!-- --- -->
+        <h5 id="multiple-args">Functions - Multiple Positional Arguments</h5>
+        <hr>
+        <p>
+            <p>
+                <code><pre>def print_argument(*args):
+    print( argument )</pre></code>
+            </p>
+            <p>
+                Multiple arguments can be used even when one does not 
+                know how many the function will receive. 
+            </p>
+            <p>
+                One can use the * operator before the parameter and that tells
+                python to accept as many arguments that are supplied 
+                by position and not keyword. It then creates a tuple with 
+                the inputs and thats how they are accessed. 
+            </p>
+            <p>
+                <code><pre>
+def foo( *args ):
+    for i in args:
+        print(i)
+</pre></code>
+
+            </p>
+            <p>
+                Then, one can call <code>foo()</code> with as many inputs as needed. 
+            </p>
+            <p>
+                <code>foo(1,2,3,4)</code>
+                <pre><code>1
+2
+3
+4
+</code></pre>
+            </p>
+        </div>
+<!-- --- -->
+
+
     </div>
+
+
+
+    
     
     <div class="container-no-animation Lato">
     </div>
@@ -106,9 +155,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 
-  <footer>
-    <a href="https://alecscripts.com">
-      alecscripts.com
-    </a>
+  <footer class="navbar navbar-expand-lg bg-dark text-light">
+    <div class="nav-link">
+        <a href="https://alecscripts.com">
+            alecscripts.com
+          </a>
+    </div>
+    
+    <div class="nav-link">
+        <a href="https://github.com/searsam1/searsam1.github.io">
+            Website Repository
+        </a>
+    </div>
   </footer>
+
+
+
 </html>

@@ -52,13 +52,23 @@ font-family: 'Silkscreen', cursive;
 #Experience{
     animation: zoomIn 2s;
 }
-code{
-  background-color: rgb(0,0,0,.05);
+:not(pre) > code{
   color: inherit;
+  background-color: rgb(0,0,0,.05);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+pre{
+  background-color: rgb(0,0,0,.05);
+  font-size: 16px;
 }
 
-.nav-link{
-  color: black;
+
+
+.nav-link a{
+  color: grey;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
 }
 
 #mso{
@@ -91,11 +101,21 @@ p{
 }
 @media only screen and (max-width: 900px) {
   .container-no-animation {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 }
 
+
+footer > a {
+  color: grey;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  
+}
+footer > a:hover {
+  color: white;
+}
 
  .container-no-animation
 {
@@ -138,6 +158,11 @@ button {
   position: absolute;   
   background-color: rgb(255,255,255,.97);
   color: var(--aColor-red-dark);
+  
+}
+
+p {
+  font-size: 16px;
 }
 
 #menu > p > a{
@@ -195,5 +220,5 @@ li {
 
 body{
     background-color: rgb(1,1,1,.01);
-    font-size: 25px;
+    font-size: 16px;
 }
