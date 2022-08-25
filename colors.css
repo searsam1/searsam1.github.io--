@@ -49,9 +49,6 @@ font-family: 'Silkscreen', cursive;
     --aColor-beige-white: rgb(255, 220, 182);
   }
 
-#Experience{
-    animation: zoomIn 2s;
-}
 
 code {
   color: var(--aColor-red-dark);
@@ -73,7 +70,6 @@ pre{
 
 #mso{
   color: black;
-  animation: colorHover 2s;
   font-size: 40px;
   vertical-align: bottom;
 }
@@ -88,7 +84,6 @@ p{
     background-color: white;
     color: var(--aColor-red-dark);
     /* border: 2px solid var(--aColor-red-orange); */
-    animation: floatText 1s none 0s 1;
     position: relative;
 }
 
@@ -165,6 +160,10 @@ button {
   
 }
 
+
+
+
+
 *{
   transition: all .4s;
 
@@ -214,24 +213,6 @@ li {
   padding-bottom: 10px;
 }
 
-.delay1 {
-  animation: floatText 2s none 0s 1;
-}
-.delay2 {
-  animation: floatText 2.5s none 0s 1;
-}
-.delay3 {
-  animation: floatText 3s none 0s 1;
-}
-.delay4 {
-  animation: floatText 3.5s none 0s 1;
-}
-.delay5 {
-  animation: floatText 4s none 0s 1;
-}
-.delay6 {
-  animation: floatText 4.5s none 0s 1;
-}
 
 body{
     background-color: rgb(1,1,1,.01);
