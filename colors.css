@@ -52,15 +52,15 @@ font-family: 'Silkscreen', cursive;
 #Experience{
     animation: zoomIn 2s;
 }
-:not(pre) > code{
-  color: inherit;
-  background-color: rgb(0,0,0,.05);
-  padding-left: 5px;
-  padding-right: 5px;
+
+code {
+  color: var(--aColor-red-dark);
 }
 pre{
-  background-color: rgb(0,0,0,.05);
+  background-color: rgb(0,0,0,.03);
   font-size: 16px;
+  padding: 10px;
+  
 }
 
 
@@ -160,6 +160,11 @@ button {
   color: var(--aColor-red-dark);
   
 }
+
+h5{
+  border-bottom: 1px solid rgb(0,0,0,.1);
+}
+
 
 p {
   font-size: 16px;
