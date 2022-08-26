@@ -1,22 +1,12 @@
-function show(id,id_2) {
-    const elem = document.getElementById(id_2);
+function show(id) {
 
-    if (elem.style.transform == "rotate(90deg)"){
-        document.getElementById(id_2).style.transform = "rotate(0deg)"
+    const ele = document.getElementById(id)
+
+    if (ele.style.display == "none"){
+        ele.style.display = "block"
     }
     else{
-        document.getElementById(id_2).style.transform = "rotate(90deg)"
-    }
-    const ele2 = document.getElementById(id)
-
-    if (ele2.style.display == "none"){
-        ele2.style.display = "block"
-    }
-    else{
-        ele2.style.display = "none"
+        ele.style.display = "none"
     }
 
-    
-
-        
   }
