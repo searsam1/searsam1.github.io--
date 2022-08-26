@@ -45,6 +45,28 @@
                         </p>
                     </h5>
                      <p>
+                        <a href="#old-way">Old way</a>
+                    </p>
+                     <p>
+                        <a href="#string_format">String Format</a>
+                    </p>
+                     <p>
+                        <a href="#f-strings">f strings</a>
+                    </p>
+                    
+                </div>      
+                </button>
+
+                <button onclick="show('menu1','lt')">
+                    Functions 
+                
+                <div id="menu1" class="menu" style="display: none;">
+                    <h5>
+                        <p>
+                            <a style="color: black;" href="#functions">Functions</a>
+                        </p>
+                    </h5>
+                     <p>
                         <a href="#basicSyntax">Basic Syntax</a>
                     </p>
                      <p>
@@ -82,6 +104,61 @@
             the string based on the code given.
         </p>
 
+        <h5 id="old-way">
+            Old Way
+        </h5>
+        <p>
+            One can use the modulo <code>%</code> operator in a string
+            to format it. 
+        </p>
+        <p>
+            <pre><code class="language-python line-numbers">import math
+print('The value of e is approximately %5.5f.' % math.e)
+# The value of e is approximately 2.71828.
+
+message = "hello world!"
+print('Message : %s' % message)
+# Message : hello world!
+            </code></pre>
+        </p>
+
+        <h5 id="string_format">
+            Using string's format() method
+        </h5>
+
+        <p>
+            Strings in python come with the <code >str.format()</code> method.
+        </p>
+        <p>
+            <code> { } </code> are used to enclose a variable. Instead of
+            putting the variable itself in the <code> { } </code>, the index 
+            of the variable passed in goes there, or, one can 
+            skip the index if the arguments are the same length and 
+            match up. Argument 0 will be mapped to the 0th <code> { } </code>, argument 1 will
+            be mapped to the 1st <code> {   } </code>, and so on.
+        </p>
+
+        <p>
+            <code>"{} {} {}".format(1, 2, 3)</code>
+            <p><code>'1 2 3'</code></p>
+        </p>
+
+        <h5 id="f-strings">
+            Format Strings (f strings)
+        </h5>
+
+        <p>
+            Python 3.16 introduced format string literals, 
+            an easy way to format strings using <code>f"{something} {goes_here}"</code>
+        </p>
+        <p>
+            Technically those are string literals. Formatted string literals
+            are more precise and give more arguments. <code>f"{math.pi:.3f}"</code>. 
+        </p>
+        <p>
+            Giving a number after the semi colon will make it n characters wide at minimum.
+            And the f means it will be a float.
+        </p>
 
     </div>
 
