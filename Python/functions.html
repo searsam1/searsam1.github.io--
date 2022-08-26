@@ -7,6 +7,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../main.css">
+    <!-- Prism CSS -->
+    <link rel="stylesheet" href="../prism/prism.css">
     <!-- Google Api Fonts, then Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -95,8 +97,8 @@
             <br>
             The body of the function comes after the semi colon, a <code>\n</code> (newline) and a tab.
             <br>
-            <code><pre>def foo():
-    print("Hello World!")</pre></code>
+            <pre><code class="language-python">def foo():
+    print("Hello World!")</code></pre>
         </p>
     </p>
     <p>
@@ -108,8 +110,8 @@
     
     <p>
         <p>
-            <code><pre>def print_argument(argument):
-    print(argument))</pre></code>
+            <pre><code class="language-python">def print_argument(argument):
+    print(argument))</code></pre>
         </p>
         <p>
             Arguments are objects that are passed into a function, like <code>print_argument(argument)</code> above.
@@ -120,9 +122,9 @@
             to *add types by using a colon after the argument and the type.
         </p>
         <p>
-            <code><pre># Argument arg using type string.
+            <pre><code class="language-python"># Argument arg using type string.
 def foo( arg: str ):     
-    print("Hello World!")</pre></code>
+    print("Hello World!")</code></pre>
         </p>
 
 <!-- --- -->
@@ -130,8 +132,8 @@ def foo( arg: str ):
         
         <p>
             <p>
-                <code><pre>def print_argument(*args):
-    print( argument )</pre></code>
+                <pre><code class="language-python">def print_argument(*args):
+    print( argument )</code></pre>
             </p>
             <p>
                 Multiple arguments can be used even when one does not 
@@ -144,11 +146,11 @@ def foo( arg: str ):
                 the inputs and thats how they are accessed. 
             </p>
             <p>
-                <code><pre>
+                <pre><code class="language-python">
 def foo( *args ):
     for i in args:
         print(i)
-</pre></code>
+</code></pre>
 
             </p>
             <p>
@@ -156,7 +158,7 @@ def foo( *args ):
             </p>
             <p>
                 <code>foo(1,2,3,4)</code>
-                <pre><code>1
+                <pre><code class="language-python">1
 2
 3
 4
@@ -165,7 +167,7 @@ def foo( *args ):
             <h5 id="multiple-args-keyword">
                 Multiple Keyword Arguments</h5>
             
-<pre><code>def foo(*args, **kwargs):
+<pre><code class="language-python">def foo(*args, **kwargs):
     for k,v in kwargs.items():
         print(k, v)
 
@@ -195,7 +197,7 @@ foo(1, 2, 3, one=1, two=2)
         Default Arguments</h5>
 
         <p>
-            <pre><code>def foo(arg="default"):
+            <pre><code class="language-python">def foo(arg="default"):
     print(arg)
 </code></pre>
         </p>
@@ -233,7 +235,7 @@ foo(1, 2, 3, one=1, two=2)
         </p>
 
         <p>
-            <pre><code>def f(x):
+            <pre><code class="language-python">def f(x):
     return x * x         
     
 print( f(3) )    
@@ -256,10 +258,13 @@ print( f(3) )
     </div>
     <!-- Optional JavaScript -->
     <script src="../mainJs.js"></script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- Prism JavaScript -->
+        <script src="../prism/prism.js"></script>
   </body>
 
   <footer class="navbar navbar-expand-lg bg-dark text-light">
