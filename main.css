@@ -51,7 +51,17 @@ footer > a {
 button {
   background: none;
   border: none;
+  font-size: 20px;
+  margin: 10px;
+  border-bottom: 1px solid var(--aColor-red-dark);
+  
 }
+
+button:hover {
+  background-color: rgb(0,0,0,.02);
+  
+}
+
 button:focus {outline: none;}
 
 .material-symbols-outlined{
@@ -102,13 +112,18 @@ button:focus {outline: none;}
 }
 
 .menu{
-  padding: 10px;
+  padding: 20px;
+  margin-top: 10px;
   position: absolute;   
-  background-color: rgb(248, 248, 248);
-  color: var(--aColor-red-dark);
-  box-shadow: 1px 1px 1px 1px rgb(120, 120, 120);
+  background-image: repeating-linear-gradient(white,rgb(0,0,0,.05),white);  
+  background-color: white;
   text-align: left;
-  
+  border-bottom: 2px solid black;
+  border-left: 2px solid darkred;
+  border-right: 2px solid darkred;
+  border-top: 8px solid black;
+  text-align: center;
+
 }
 
 .menu > p > a{
@@ -119,13 +134,17 @@ button:focus {outline: none;}
 
 .menu > p > a:hover{
   text-decoration: none;
-  background: rgb(0,0,0,.05);
+  color: darkred;
 }
 
-.menu h5{
-  padding: 10px;
-  text-align: center;
+.menu h5 p a{
+  color: black;
+  font-size: 30px;
+  text-decoration: none;
+}
 
+.menu h5 p a:hover{
+  color: darkred;
 }
 
 /* 
