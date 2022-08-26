@@ -30,7 +30,10 @@ body{
 code{
   color: var(--aColor-red-dark);
 }
-h5{border-bottom: 1px solid rgb(0,0,0,.1);}
+h5{
+  border-bottom: 1px solid rgb(0,0,0,.1);
+  padding-top: 80px;
+}
 p{
   color: black;
   font-size: 16px;

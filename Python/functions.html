@@ -58,7 +58,26 @@
             return values. That way, tests can be
             easy through assertion.
         </p>
-        <h5 id="basicSyntax">Functions - Basic Syntax</h5>
+
+        <p>
+            Functions in python are similar to mathmatical 
+            functions: take in a value, modify it and output 
+            the result. Though, when it comes to coding and programming, 
+            functions are more a way to copy and paste code 
+            with ease. One is taking a set of instructions and 
+            putting it inside a function then exucting those steps repeatedly. 
+        </p>
+
+        <p>
+            It is like when cooking and using premade cookie mix. Throw in some water 
+            to the batch and they are ready to be cooked. The point is, one does not have 
+            to mix together flour, water, eggs etc. to make them, it is already mixed. Functions
+            work in a similar way. Instead of rewriting the function every time, it is 
+            called with <code>()</code>. 
+        </p>
+
+
+        <h5 id="basicSyntax">Basic Syntax</h5>
         
         <p>
             Functions are defined with the <code>def</code> keyword 
@@ -74,8 +93,12 @@
     print("Hello World!")</pre></code>
         </p>
     </p>
+    <p>
+        Defining the function will not call the function. 
+        The function must be executed  with parathensis: <code>foo()</code> .
+    </p>
 
-    <h5 id="args">Functions - Arguments and Inputs to the Function</h5>
+    <h5 id="args">Arguments and Inputs to the Function</h5>
     
     <p>
         <p>
@@ -97,7 +120,7 @@ def foo( arg: str ):
         </p>
 
 <!-- --- -->
-        <h5 id="multiple-args">Functions - Multiple Positional Arguments</h5>
+        <h5 id="multiple-args">Multiple Positional Arguments</h5>
         
         <p>
             <p>
@@ -134,7 +157,7 @@ def foo( *args ):
 </code></pre>
             </p>
             <h5 id="multiple-args-keyword">
-                Functions - Multiple Keyword Arguments</h5>
+                Multiple Keyword Arguments</h5>
             
 <pre><code>def foo(*args, **kwargs):
     for k,v in kwargs.items():
@@ -161,6 +184,65 @@ foo(1, 2, 3, one=1, two=2)
         going through the <code>kwargs.items()</code> or 
         accesing it by value.
     </p>
+
+    <h5 id="default-args">
+        Default Arguments</h5>
+
+        <p>
+            <pre><code>def foo(arg="default"):
+    print(arg)
+</code></pre>
+        </p>
+
+        <p>
+            Setting an argument equal to an inital 
+            value is called giving it a default argument. This 
+            makes the argument optional.
+        </p>
+
+        <p>
+            Calling <code>foo()</code> without any arguments 
+            will print "default", while calling foo with an argument 
+            like <code>foo("happy")</code>, it will print the string <code>"happy"</code>.
+        </p>
+
+        <h5 id="returningValues">Returning Values</h5>
+
+        <p>
+            Returning values makes functions in python 
+            a bit more mathmatical. Say I have a simple function, <br>
+            <code>f(x) = x * x</code>. 
+        </p>
+        <p>
+            <code>f(3) = 3 * 3 = 9</code>
+        </p>
+        <p>
+            It math it is implied that the function is returned. <code>f(3) = 9</code> and 
+            one did not have to write return x at the end.
+        </p>
+        <p>
+            With programming it is differnt: one must specify the return value of the function, 
+            or <code>None</code> will be returned. So far, the functions used have all printed 
+            something rather than returning it. Once a value is returned the function is killed. 
+        </p>
+
+        <p>
+            <pre><code>def f(x):
+    return x * x         
+    
+print( f(3) )    
+# -> 9</code></pre>
+        </p>
+        <p>
+            <code>f(3)</code> returns 9, which is then printed out.
+        </p>
+
+        <p>
+            It helps to understand when assiging the return result to a variable.
+            <code>result = f(3)</code>. <code>result</code> will take on the value of 9 
+            and can even be put into another function to be manipulated.
+        </p>
+
         </div>
 <!-- --- -->
     </div>
