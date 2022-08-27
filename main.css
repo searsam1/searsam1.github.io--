@@ -28,7 +28,9 @@ body{
   
 }
 code{
-  color: var(--aColor-red-dark);
+  color: black;
+  padding: 2px;
+  background-color: rgb(0,0,0,.075);
 }
 h5{
   border-bottom: 1px solid rgb(0,0,0,.1);
@@ -63,6 +65,20 @@ button:hover {
 }
 
 button:focus {outline: none;}
+
+thead tr td{
+  border: 1px solid black;
+  padding: 10px;
+  color: darkred;
+  font-size: larger;
+}
+
+tr td{
+  border: 1px solid black;
+  color: black;
+  padding: 5px;
+  font-size: 15px;
+}
 
 .material-symbols-outlined{
   vertical-align: bottom;

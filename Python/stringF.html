@@ -21,11 +21,11 @@
         
         <nav class="navbar navbar-expand bg-light Lato shadow-sm">
             
-            <span id="light-bolt" class="material-symbols-outlined">
+            <span title="bolt" id="light-bolt" class="material-symbols-outlined">
                 bolt
                 </span>
             
-            <button onclick="show('menu-python','lt0')">
+            <button title="python" onclick="show('menu-python','lt0')">
                 Python 
             
             <div class="menu" id="menu-python" style="display: none;">
@@ -156,7 +156,7 @@ print('Message : %s' % message)
         </h5>
 
         <p>
-            Python 3.16 introduced format string literals, 
+            Python 3.6 introduced format string literals, 
             an easy way to format strings using <code>f"{something} {goes_here}"</code>
         </p>
         <p>
@@ -174,6 +174,145 @@ full_name = f"{first_name.title()} {last_name.title()}"
 print(full_name)
 # John Sullivan  
             </code></pre>
+        </p>
+
+        <p>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Conversion</td>
+                        <td>Meaning</td>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td>
+                        <code>'d'</code>
+                    </td>
+                    <td>
+                        Signed integer base 10.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>'i'</code>
+                    </td>
+                    <td>
+                        Signed integer base 10.
+                    </td>
+                </tr><tr>
+                    <td>
+                        <code>'o'</code>
+                    </td>
+                    <td>
+                        Signed octal 
+                    </td>
+                </tr><tr>
+                    <td>
+                        <code>'u'</code>
+                    </td>
+                    <td>
+                        Obsolete type – identical to 'd'.
+                    </td>
+                </tr><tr>
+                    <td>
+                        <code>'x'</code>
+                    </td>
+                    <td>
+                        Signed hexadecimal (lowercase).
+                    </td>
+                </tr><tr>
+                    <td>
+                        <code>'X'</code>
+                    </td>
+                    <td>
+                        Signed hexadecimal (uppercase).
+                    </td>
+                </tr><tr>
+                    <td>
+                        <code>'e'</code>
+                    </td>
+                    <td>
+                        Floating point exponential format (lowercase).
+                    </td>
+                </tr><tr>
+                    <td>
+                        <code>'E'</code>
+                    </td>
+                    <td>
+                        Floating point exponential format (uppercase).
+                    </td>
+                </tr><tr>
+                    <td>
+                        <code>'f'</code>
+                    </td>
+                    <td>
+                        Floating point decimal format.
+                    </td>
+                </tr><tr>
+                    <td>
+                        <code>'F'</code>
+                    </td>
+                    <td>
+                        Floating point decimal format.
+                    </td>
+                </tr><tr>
+                    <td>
+                        <code>'g'</code>
+                    </td>
+                    <td>
+                        Floating point format. Uses lowercase exponential format if exponent is less than -4 or not less than precision, decimal format otherwise.
+                    </td>
+                </tr><tr>
+                    <td>
+                        <code>'G'</code>
+                    </td>
+                    <td>
+                        Floating point format. Uses uppercase exponential format if exponent is less than -4 or not less than precision, decimal format otherwise.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>'c'</code>
+                    </td>
+                    <td>
+                        Single character (accepts integer or single character string).
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>'r'</code>
+                    </td>
+                    <td>
+                        String (converts any Python object using repr()).
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>'s'</code>
+                    </td>
+                    <td>
+                        String (converts any Python object using str()).
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>'a'</code>
+                    </td>
+                    <td>
+                        String (converts any Python object using ascii()).
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>'%'</code>
+                    </td>
+                    <td>
+                        No argument is converted, results in a '%' character in the result.
+                    </td>
+                </tr>
+
+            </table>
         </p>
 
     </div>
