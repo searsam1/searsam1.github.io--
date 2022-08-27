@@ -25,6 +25,18 @@
 # arr = arr.reshape((14,14))
 # print(arr)
 
-raw = "hey \n "
-raw = r"hey \n "
-print(raw)
+
+import string
+r = string.printable
+
+print("<table>")
+print(f"<tr>")
+
+for idx,i in enumerate(r):
+    if (idx + 1) % 6 == 0:
+        print(f"</tr>")
+        print(f"<tr>")
+        print(f"<td>{i}</td><td>{ord(i)}</td>")
+    else:
+        print(f"<td>{i}</td><td>{ord(i)}</td>")
+print("</table>")
