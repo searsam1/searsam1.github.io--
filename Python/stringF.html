@@ -190,85 +190,89 @@ print(full_name)
                         <code>'d'</code>
                     </td>
                     <td>
-                        Signed integer base 10.
+                        <p>Signed integer base 10.</p>
+                        <p>
+                            <code>f"{5568547:d}" -> '5568547'</code>
+                        </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <code>'i'</code>
-                    </td>
-                    <td>
-                        Signed integer base 10.
-                    </td>
-                </tr><tr>
-                    <td>
                         <code>'o'</code>
                     </td>
                     <td>
-                        Signed octal 
+                        <p>Signed octal</p>
+                        <p><code>f"{256:o}" -> '400'</code> </p>
                     </td>
-                </tr><tr>
-                    <td>
-                        <code>'u'</code>
-                    </td>
-                    <td>
-                        Obsolete type – identical to 'd'.
-                    </td>
-                </tr><tr>
+                </tr>
+                <tr>
                     <td>
                         <code>'x'</code>
                     </td>
                     <td>
-                        Signed hexadecimal (lowercase).
+                        <p>Signed hexadecimal (lowercase).</p>
+                        <p><code>f"{255:x}" -> 'ff' </code></p>
+                        
                     </td>
                 </tr><tr>
                     <td>
                         <code>'X'</code>
                     </td>
                     <td>
-                        Signed hexadecimal (uppercase).
+                        <p>Signed hexadecimal (upper).</p>
+                        <p><code>f"{255:X}" -> 'FF' </code></p>
                     </td>
                 </tr><tr>
                     <td>
                         <code>'e'</code>
                     </td>
                     <td>
-                        Floating point exponential format (lowercase).
+                        <p>Floating point exponential format (lowercase).</p>
+                        <p><code>f"{255:e}" -> '2.550000e+02'</code></p>
                     </td>
                 </tr><tr>
                     <td>
                         <code>'E'</code>
                     </td>
                     <td>
-                        Floating point exponential format (uppercase).
+                        <p>Floating point exponential format (uppercase).</p>
+                        <p><code>f"{255:E}" -> '2.550000E+02'</code></p>
                     </td>
                 </tr><tr>
                     <td>
                         <code>'f'</code>
                     </td>
                     <td>
-                        Floating point decimal format.
+                        <p>Floating point decimal format.</p>
+                        <p><code>f"{255:f}" -> '255.000000'</code></p>
                     </td>
                 </tr><tr>
                     <td>
                         <code>'F'</code>
                     </td>
                     <td>
-                        Floating point decimal format.
+                        <p>Floating point decimal format.</p>
+                        <p><code>f"{255:F}" -> '255.000000'</code></p>
                     </td>
                 </tr><tr>
                     <td>
                         <code>'g'</code>
                     </td>
                     <td>
-                        Floating point format. Uses lowercase exponential format if exponent is less than -4 or not less than precision, decimal format otherwise.
+                        <p>Floating point format. Uses lowercase exponential format if exponent is less than -4 or not less than precision, decimal format otherwise.</p>
+                        <p>
+                            <code>f"{255.777676:g}" -> '255.778'</code>
+                        </p>
                     </td>
                 </tr><tr>
                     <td>
                         <code>'G'</code>
                     </td>
                     <td>
-                        Floating point format. Uses uppercase exponential format if exponent is less than -4 or not less than precision, decimal format otherwise.
+                        <p>Floating point format. Uses lowercase exponential format if exponent is less than -4 or not less than precision, decimal format otherwise.</p>
+                        <p>
+                            <code>f"{255.777676:G}" -> '255.778'</code>
+                        </p>
                     </td>
                 </tr>
                 <tr>
@@ -276,7 +280,10 @@ print(full_name)
                         <code>'c'</code>
                     </td>
                     <td>
-                        Single character (accepts integer or single character string).
+                        <p>Single character (accepts integer or single character string).</p>
+                        <p>
+                            <code>f"{100:c}" -> "d"</code>
+                        </p>
                     </td>
                 </tr>
                 <tr>
@@ -284,7 +291,8 @@ print(full_name)
                         <code>'r'</code>
                     </td>
                     <td>
-                        String (converts any Python object using repr()).
+                        <p>String (converts any Python object using repr()).</p>
+                        <p></p>
                     </td>
                 </tr>
                 <tr>
@@ -308,7 +316,8 @@ print(full_name)
                         <code>'%'</code>
                     </td>
                     <td>
-                        No argument is converted, results in a '%' character in the result.
+                        <p>No argument is converted, results in a '%' character in the result.</p>
+                        <p><code>f"{1:%}" -> '100.000000%'</code></p>
                     </td>
                 </tr>
 
