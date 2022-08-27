@@ -12,15 +12,19 @@
 # print(full_name)
 # # john sullivan
 
-# import string
-import numpy as np
+# # import string
+# import numpy as np
 
-prntable = r"""0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~0000"""
+# prntable = r"""0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~0000"""
 
-arr = [] 
-for i in prntable:
-    arr.append([str(ord(i)).rjust(3,'0'), i])
+# arr = [] 
+# for i in prntable:
+#     arr.append([str(ord(i)).rjust(3,'0'), i])
 
-arr = np.array(arr)
-arr = arr.reshape((14,14))
-print(arr)
+# arr = np.array(arr)
+# arr = arr.reshape((14,14))
+# print(arr)
+
+raw = "hey \n "
+raw = r"hey \n "
+print(raw)

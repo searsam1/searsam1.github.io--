@@ -110,8 +110,59 @@ print( str(x) )
  ['091' '[' '092' '\\' '093' ']' '094' '^' '095' '_' '096' '`' '123' '{']
  ['124' '|' '125' '}'  '126' '~' '048' '0' '048' '0' '048' '0' '048' '0']]
     </pre>
+
+    <h5>Raw Strings</h5>
+    <p>
+        Raw strings treat the backslash <code>\</code> as a 
+        literal character. Printing <code>"\n"</code> will normally 
+        give a newline, but with a raw string it treats  
+        it as a literal <code>"\n"</code>.
+    </p>
     
+    <pre>
+        <code class="language-python">
+# Prints a newline
+print("hey \n hey")
+# hey
+#  hey
+
+# Prints literal \n
+print(r"hey \n hey")
+# hey \n hey
+        </code>
+    </pre>
     
+    <h5>
+        Multi-line Strings
+    </h5>
+    <p>
+        Use three double or single quotes to start and end a 
+        multiline string.
+    </p>
+    <pre><code class="language-python">
+the_message = """
+A child is born, with no state of mind
+Blind to the ways of mankind
+God is smilin' on you, but he's frownin' too
+Because only God knows, what you'll go through
+"""        
+    </code></pre>
+
+
+
+    <h5>
+        Strings are Arrays of Characters
+    </h5>
+
+    <p>
+        Single characters can be accessed through 
+        the <code>[ ]</code> operator, with the index 
+        specifying which location letter is in. If <code>s = "hello"</code>, then
+        <code>s[0] == "h"</code>. They are zero-indexed like normal arrays.
+    </p>
+
+
+
     </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
