@@ -36,9 +36,19 @@ h5{
   border-bottom: 1px solid rgb(0,0,0,.1);
   padding-top: 50px;
 }
+
+.credits{
+  font-size: small;
+  width: 50%;
+}
+
 p{
   color: black;
   font-size: 18px;
+}
+
+.display-4{
+  text-align: center;
 }
 
 footer{
