@@ -291,12 +291,35 @@ Because only God knows, what you'll go through
         Single characters can be accessed through 
         the <code>[ ]</code> operator, with the index 
         specifying which location letter is in. If <code>s = "hello"</code>, then
-        <code>s[0] == "h"</code>. They are zero-indexed like normal arrays.
+        <code>s[0] == "h"</code>. They are zero-indexed like normal arrays. <code>[-1]</code> is 
+        always the last index.
     </p>
 
     <h3>
         Reverse a String
     </h3>
+    <p>
+        Python has a nice feature where strings can be reversed with <code>string[::-1]</code>
+        It is like looping over the string in reverse order with the <code>-1</code>.
+    </p>
+    <pre><code class="language-python">
+string = "hello world"
+reversed_string = string[::-1]
+# Outputs 
+# 'dlrow olleh'      
+    </code></pre>
+
+
+    <h3>
+        String Functions
+    </h3>
+
+    <p>
+        <code>capitalize()</code>
+        <p>
+            Capitalize the first letter of each word in a string.
+        </p>
+    </p>
 
     </div>
 
