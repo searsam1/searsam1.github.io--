@@ -15,93 +15,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Dancing+Script:wght@500&family=Indie+Flower&family=Lato:wght@300&family=Silkscreen&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>String Formatting</title>
-    <div class="sticky-top">
-        
-        
-        
-        <nav class="navbar navbar-expand bg-light Lato shadow-sm">
-            
-            <span title="bolt" id="light-bolt" class="material-symbols-outlined">
-                bolt
-                </span>
-            
-            <button title="python" onclick="show('menu-python','lt0')">
-                Python 
-            
-            <div class="menu" id="menu-python" style="display: none;">
-                <p>
-                    <a href="https://alecscripts.com/Python/functions">Functions</a>
-                </p>
-                <p>
-                    <a href="https://alecscripts.com/Python/stringF">String Formatting</a>
-                </p>
-
-            </div>      
-            </button>  
-            <button onclick="show('menu')">
-                String Formatting 
-            
-            <div id="menu" class="menu" style="display: none;">
-                <h5>
-                    <p>
-                        <a style="color: black;" href="#stringF">String Formatting</a>
-                    </p>
-                </h5>
-                 <p>
-                    <a href="#old-way">Old way</a>
-                </p>
-                 <p>
-                    <a href="#string_format">String Format</a>
-                </p>
-                 <p>
-                    <a href="#f-strings">f strings</a>
-                </p>
-                
-            </div>   
-            </button>
-            <button onclick="show('menu1')">
-                Functions
-            
-            <div id="menu1" class="menu" style="display: none;">
-                <h5>
-                    <p>
-                        <a href="#functions">Functions</a>
-                    </p>
-                </h5>
-                 <p>
-                    <a href="https://alecscripts.com/Python/functions#basicSyntax">Basic Syntax</a>
-                </p>
-                 <p>
-                    <a href="https://alecscripts.com/Python/functions#args">Arguments and Input</a>
-                </p>
-                 <p>
-                    <a href="https://alecscripts.com/Python/functions#multiple-args">Multiple Positional Arguments</a>
-                </p>
-                 <p>
-                    <a href="https://alecscripts.com/Python/functions#multiple-args-keyword">Multiple Keyword Arguments</a>
-                </p>
-                <p>
-                    <a href="https://alecscripts.com/Python/functions#default-args">Default Arguments</a>
-                </p>
-                <p>
-                    <a href="https://alecscripts.com/Python/functions#returningValuess">Return Values</a>
-                </p>
-            </div>      
-            </button>
-            <nav class="nav-link">
-                
-                
-                
-                
-                
-            </nav>
-        </nav>
-    </div>
   </head>
 <body>
 
     <div class="container-no-animation Lato">
-        <h3 id="stringF">String Formatting</h3>
+        
+        <center>
+        <img width="70%" src="../Resources/string-f.jpg">
+        <p class="credits">
+            Photo by <a href="https://unsplash.com/@melpoole?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mel Poole</a> on <a href="https://unsplash.com/s/photos/papers?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+        </p>
+        </center>
+
+        <h3 class="display-4" id="stringF">String Formatting</h3>
 
         <p>
             String formatting makes a world of difference.
@@ -112,9 +39,9 @@
             the string based on the code given.
         </p>
 
-        <h5 id="old-way">
+        <h3 id="old-way">
             Old Way
-        </h5>
+        </h3>
         <p>
             One can use the modulo <code>%</code> operator in a string
             to format it. 
@@ -130,9 +57,9 @@ print('Message : %s' % message)
             </code></pre>
         </p>
 
-        <h5 id="string_format">
+        <h3 id="string_format">
             Using string's format() method
-        </h5>
+        </h3>
 
         <p>
             Strings in python come with the <code >str.format()</code> method.
@@ -151,9 +78,9 @@ print('Message : %s' % message)
             <p><code>'1 2 3'</code></p>
         </p>
 
-        <h5 id="f-strings">
+        <h3 id="f-strings">
             Format Strings (f strings)
-        </h5>
+        </h3>
 
         <p>
             Python 3.6 introduced format string literals, 
