@@ -70,7 +70,7 @@ h3 {
   color: black;
   border-bottom: 1px solid rgb(0,0,0,.05);
 }
-h3::before:not(.display-4){
+h3:not(.display-4)::before{
   content: "→";
   margin-right: 10px;
 }
