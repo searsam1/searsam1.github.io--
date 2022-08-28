@@ -27,16 +27,8 @@
 
 
 import string
-r = string.printable
+import pandas as pd
 
-print("<table>")
-print(f"<tr>")
-
-for idx,i in enumerate(r):
-    if (idx + 1) % 6 == 0:
-        print(f"</tr>")
-        print(f"<tr>")
-        print(f"<td>{i}</td><td>{ord(i)}</td>")
-    else:
-        print(f"<td>{i}</td><td>{ord(i)}</td>")
-print("</table>")
+chars = string.printable
+d = {c : ord(c) for c in chars}
+print(d)
