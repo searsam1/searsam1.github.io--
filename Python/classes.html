@@ -97,7 +97,46 @@ crayon = Crayon()
 # will define the class later
     
         </code></pre>
+        <h3>
+            Instance Variables 
+        </h3>
+        <p>
+            An instance variable is connected to 
+            the instance that created it. They are basically 
+            variables passed into the function when the 
+            object is created.
+        </p>
+        <p>
+            Python uses the special <code>__init__()</code> method 
+            to define instance variables. It is usually placed 
+            at the beginning of the class.
+        </p>
 
+                <pre><code class="language-python">
+class Crayon:
+    def __init__(self, color:str):
+        self.color = color
+
+green_crayon = Crayon("green")    
+print(green_crayon.color)
+# 'green'    
+
+        </code></pre>
+
+        <p>
+            Instance variables can also be accessed throughout 
+            the class by referencing self. Self is an arbitrary variable name; 
+            it represents the underlying instance inside the instance itself.
+        </p>
+
+        <pre><code class="language-python">
+class Crayon:
+    def __init__(self, color:str):
+        self.color = color
+
+    def print_color(self):
+        print(self.color)        
+        </code></pre>
 
     </div>
 
