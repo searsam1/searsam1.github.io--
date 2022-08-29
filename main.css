@@ -65,6 +65,11 @@ button {
   
 }
 
+.navbar-header{
+  border: none;
+  padding-top: 10px;
+}
+
 h3 {
   margin-top: 60px;
   color: black;
