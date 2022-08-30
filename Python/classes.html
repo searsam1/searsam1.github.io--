@@ -135,7 +135,19 @@ class Crayon:
         self.color = color
 
     def print_color(self):
-        print(self.color)        
+        print(self.color)
+
+    # using "crayon" instead of self 
+    # to better illustrate the point    
+    def change_colors(crayon,color):
+        crayon.color = color
+
+green_crayon = Crayon("green")
+green_crayon.print_color()
+# Ouputs -> green
+green_crayon.change_colors("yellowgreen")
+green_crayon.print_color()
+# "yellowgreen"   
         </code></pre>
 
     </div>
