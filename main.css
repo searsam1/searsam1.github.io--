@@ -65,6 +65,15 @@ button {
   
 }
 
+#foot{
+  color: rgb(180, 156, 156);
+  background-color: black;
+}
+
+#foot a{
+  font-size: 14px;
+}
+
 .navbar-header{
   border: none;
   padding-top: 10px;
