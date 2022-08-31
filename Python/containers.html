@@ -69,11 +69,20 @@ lst3 = [["another list"], lst, lst2]
 lst = ["a", "b", "c"]
 
 for i in range(len(lst)):
-    print(i)
-# 0
-# 1
-# 2
+    print(i, lst[i])
+# 0 "a"
+# 1 "b"
+# 2 "c"
+
+# better to use enumerate(), but 
+# trying to keep it simple for this example
         </code></pre>
+        <p>
+            Assigning a value to a list is easy as well. Reference 
+            the list and the index and set it equal to whatever 
+            value. <br><code>lst[0] = "1"</code>
+        </p>
+        
         
     </div>
 
