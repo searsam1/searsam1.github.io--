@@ -41,10 +41,10 @@
                 Classes in Python
             </h3>
     
-            <img width="50%" src="../Resources/classes.jpg">
+            <!-- <img width="50%" src="../Resources/classes.jpg">
             <div class="credits">
                 Photo by <a href="https://unsplash.com/@dcejoshe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Josh Eckstein</a> on <a href="https://unsplash.com/s/photos/classes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-            </div>
+            </div> -->
         </center>
 
         <h3>
@@ -151,6 +151,49 @@ green_crayon.print_color()
 # "yellowgreen"   
         </code></pre>
 
+        <h3>
+            Class Variables and Methods
+        </h3>
+        <p class="indent">
+            Class Variables are shared between
+            every instance of the class; they belong to
+            it. To get access to class variables 
+            inside of a class method they must 
+            put the <code>@classmethod</code> decorator 
+            on top. The first argument 
+            passed into the function is now a 
+            reference to the class and not an object 
+            of that class. This method is now 
+            a class method as well.
+        </p>
+        <pre><code class="language-python">
+class Testing:
+    tests = 0 
+        
+    @classmethod        
+    def is_equal(cls,a,b):
+        try:
+            assert a == b
+            cls.tests += 1
+            print("tests passed: " + str(cls.tests))
+        except AssertionError:
+            print(f"{a}\n  should = \n{b}")
+
+t = Testing()
+t.is_equal(3,3)
+t.is_equal(3,44)
+t.is_equal(2,2)
+t.is_equal(1,1)
+
+# tests passed: 1
+# 3
+#   should = 
+# 44
+# tests passed: 2
+# tests passed: 3
+        </code></pre>
+
+<!-- Begin Script Tags -->
     </div>
 
 
