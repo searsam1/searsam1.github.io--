@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../main.css">
+    <!-- Prism CSS -->
+    <link rel="stylesheet" href="../prism/prism.css">
+    <!-- Google Api Fonts, then Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Dancing+Script:wght@500&family=Indie+Flower&family=Lato:wght@300&family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>alecscripts - Classes</title>
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Alec Scripts</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav">
+                <a href="https://alecscripts.com/Python/main.html" class="nav-item nav-link active px-3">
+                    Python
+                </a>
+            </div>
+        </div>
+      </nav>
+
+    
+  </head>
+<body>
+
+    <h3 class="display-4 text-center">
+        Yield
+    </h3>   
+    <div class="container-no-animation">
+
+        <h3>
+            What is Yield in Python?
+        </h3>
+        <p class="indent">
+            <code>yield</code> is a keyword in python
+            that makes a function return 
+            a generator. While a return statement 
+            stops a function, the yield keyword "yields"
+            a value while keeping track of the state. 
+
+            Once the yield keyword is hit again 
+            it will yield another value and so on.
+        </p>
+        <pre><code class="language-python">
+
+names = ["Alec", "John", "James"]
+
+def names_start_j(names):
+    for name in names:
+        if name.startswith("J"): 
+            yield name
+
+names_j = names_start_j(names)
+for name in names_j:
+    print(name)
+# John
+# James    
+
+        </code></pre>
+        <p>
+            Think of the <code>range</code> function:
+            something similar can be created using yield. Now, why
+            use yield over something like a normal list? Memory. The 
+            values are iterated over but not saved and can only be used 
+            once.
+        </p>
+        <pre><code class="language-python">
+print( list( names_j ) )    
+# []
+</code></pre>
+        <p>
+            <code>print(list(names_j))</code> returns <code>[]</code> 
+            because generators can only be iterated over once. It will 
+            basically go through and use each variable without remembering them
+            all like a list would.
+        </p>
+        <p>
+            Generators only need to be used once 
+            to generate an iterable like a list, 
+            so there is usually no need to keep the 
+            generator as well. 
+        </p>
+
+        <pre>
+            <code class="language-python">
+def my_range(start,end):
+    while start < end:
+        yield start
+        start += 1
+
+for i in my_range(10,20):
+    print(i, end=", ")
+# 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,                
+
+            </code>
+        </pre>
+    </div>
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- Prism JavaScript -->
+        <script src="../prism/prism.js"></script>
+  </body>
+
+  <footer >
+    <nav id="foot" class=" navbar navbar-expand-lg">
+        <div class="nav-link">
+            <a>
+                Created with github.io
+            </a>
+        </div>
+        <div class="nav-link">
+            <a>
+                By Alec Sears
+            </a>
+        </div>
+        
+        
+    </nav>
+  </footer>
+</html>

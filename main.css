@@ -1,16 +1,29 @@
-@media only screen and (min-width: 900px) {
-  .container-no-animation {
+@media only screen and (min-width: 768px) {
+  .container-no-animation{
     margin-left: 20%;
     margin-right: 20%;
   }
 }
 
-@media only screen and (max-width: 900px) {
-  .container-no-animation {
-    margin-left: 10px;
-    margin-right: 10px;
+@media only screen and (max-width: 768px) {
+  .container-no-animation{
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
+
+.container-no-animation
+{
+  margin-top: 20px;
+  text-align: left;
+  font-size: 20px;
+  text-align: left;
+  /* border: 2px solid var(--aColor-red-orange); */
+}
+p.indent {
+  text-indent: 30px;
+}
+
 
 *{
   scroll-padding-top: 70px;
@@ -91,9 +104,15 @@ h3 {
   /* font-family: 'Silkscreen', cursive;  */
 }
 h3:not(.display-4)::before{
-  content: "-";
-  
+  content: "+";
   margin-right: 10px;
+}
+
+
+.display-4{
+  font-family: 'Silkscreen', cursive; 
+  background-color: black;
+  color: rgb(255,255,255,.8);
 }
 
 button:hover {
@@ -163,51 +182,9 @@ tr td{
     position: relative;
 }
 
- .container-no-animation
-{
-  margin-top: 20px;
-  text-align: left;
-  font-size: 20px;
-  /* border: 2px solid var(--aColor-red-orange); */
-}
-
-.menu{
-  padding: 20px;
-  margin-top: 10px;
-  position: absolute;   
-  background-image: repeating-linear-gradient(white,rgb(0,0,0,.05),white);  
-  background-color: white;
-  text-align: left;
-  border-bottom: 2px solid black;
-  border-left: 2px solid darkred;
-  border-right: 2px solid darkred;
-  border-top: 8px solid black;
-  text-align: center;
-
-}
 
 
 
-.menu > p > a{
-  color: black;
-  padding: 10px;
-  font-size: 16px;
-}
-
-.menu > p > a:hover{
-  text-decoration: none;
-  color: darkred;
-}
-
-.menu h5 p a{
-  color: black;
-  font-size: 30px;
-  text-decoration: none;
-}
-
-.menu h5 p a:hover{
-  color: darkred;
-}
 
 /* 
 font-family: 'Comfortaa', cursive;
