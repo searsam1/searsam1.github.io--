@@ -54,6 +54,9 @@
             </h3>
         </button>
         <div class="sector">
+            <h4>
+                What is a list
+            </h4>
             <p>
                 Lists are easy to work with in python
                 and come in handy often, especially with 
@@ -150,6 +153,34 @@ print(
             </code></pre>
         </div>        
     </div>
+
+
+    <div id="tuples">
+        <button onclick="show('tuples')">
+            <h3>
+                <span style="display: inline;" class="minus-btn" > - </span>
+                <span style="display: none;" class="plus-btn" > + </span>
+                Tuples
+            </h3>
+        </button>
+        <div class="sector">
+            <p>
+                Tuples are static containers meaning they 
+                cannot be altered after creation. Tuples 
+                are made with <code class="language-python">( )</code>
+                and the values are separated by commas.
+            </p>
+            <pre><code class="language-python">
+tup = [1, 2, 3]
+tup[0] = 2
+"""
+Traceback (most recent call last):
+  File "stdin", line 1, in module
+TypeError: 'tuple' object does not support item assignment
+"""
+            </code></pre>
+        </div>        
+    </div>    
 
 
 

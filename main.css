@@ -90,7 +90,18 @@ button {
   border: none;
   padding-top: 10px;
 }
+h4 {
+  margin-top: 10px;
+  margin-left: 10px;
 
+  color: black;
+  /* font-family: 'Comfortaa', cursive; */
+  /* font-family: 'Dancing Script', cursive;
+  font-size: 35px; */
+  /* font-family: 'Indie Flower', cursive; */
+  font-family: 'Lato', sans-serif;
+  /* font-family: 'Silkscreen', cursive;  */
+}
 
 h3 {
   margin-top: 30px;
@@ -171,14 +182,8 @@ tr td{
   font-family: 'Lato', sans-serif;
 }
 
-.key-glock-style{
-  font-size: 50px;
-  font-family: 'Times New Roman', Times, serif;
-  color: white;
-}
-.key-glock-style::before{
-  
-}
+
+
 
 .container{
     margin-top: 10px;
