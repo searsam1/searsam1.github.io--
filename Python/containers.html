@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../main.css">
+    
     <!-- Prism CSS -->
     <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="stylesheet" href="../main.css">
     <!-- Google Api Fonts, then Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -87,7 +88,7 @@ for i in range(len(lst)):
             <p>
                 Assigning a value to a list is easy as well. Reference 
                 the list and the index and set it equal to whatever 
-                value. <br><code>lst[0] = "1"</code>
+                value. <br><code class="language-python">lst[0] = "1"</code>
             </p>
         </div>
     </div>
@@ -103,44 +104,24 @@ for i in range(len(lst)):
         </button>
         <div class="sector">
             <p>
-                Lists are easy to work with in python
-                and come in handy often, especially with 
-                list comprehensions. Lists are created 
-                by using square brackets to encapsulate 
-                the list and commas to separate the items.
-                <pre><code class="language-python">
-lst = [1, 2, 3, 4]
-lst2 = ["strings"]
-lst3 = [["another list"], lst, lst2]
-                </code></pre>
+                Dictionaries in python have a structure 
+                where there are key value pairs that match each other.
+                There can only be one value per key, because if there 
+                was more python would not know which value to 
+                get.
             </p>
             <p>
-                Elements are located by index also using square brackets. They always
-                start at zero at go to the length of the list 
-                - 1. The range function starts at zero and goes to 
-                the end parameter - 1, making it perfect for 
-                iteration and lists.
+                They are created with <code class="language-python"> { }</code> and 
+                the key-value pairs are separated by a colon. To
+                access a value, use <code class="language-python">dic[key]</code>.
+
             </p>
             <pre><code class="language-python">
-lst = ["a", "b", "c"]
-
-for i in range(len(lst)):
-    print(i, lst[i])
-# 0 "a"
-# 1 "b"
-# 2 "c"
-
-# better to use enumerate(), but 
-# trying to keep it simple for this example
+d = {"name" : "john smith"}
+print(d["name"])
+# "john smith"
             </code></pre>
-            <p>
-                Assigning a value to a list is easy as well. Reference 
-                the list and the index and set it equal to whatever 
-                value. <br><code>lst[0] = "1"</code>
-            </p>
-        </div>
-    </div>        
-        
+        </div>        
     </div>
 
 
@@ -152,22 +133,51 @@ for i in range(len(lst)):
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <!-- Prism JavaScript -->
         <script src="../prism/prism.js"></script>
-  </body>
+  </div>
+    </body>
 
-  <footer >
-    <nav id="foot" class=" navbar navbar-expand-lg">
-        <div class="nav-link">
-            <a>
-                Created with github.io
-            </a>
-        </div>
-        <div class="nav-link">
-            <a>
-                By Alec Sears
-            </a>
+
+  <footer>
+    <div class="p-3 navbar-expand-lg bg-dark text-light">
+        <div class="row">
+            <div class="col-sm-2">
+                <a href="https://alecscripts.com/Python/main.html">
+                    alecscripts.com
+                </a>
+            </div>
+            <div class="col-sm-2">
+                <a href="https://alecscripts.com/Python/main.html">
+                    About Me
+                </a>
+            </div>
         </div>
         
+        <div class="row">
+            <div class="col-sm-2">
+                <a href="https://alecscripts.com/Python/main.html">
+                    Python
+                </a>
+            </div>
+            <div class="col-sm-2">
+                <a href="https://alecscripts.com/Python/main.html">
+                    HTML
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <a href="https://alecscripts.com/Python/main.html">
+                    Functions
+                </a>
+            </div>
+            <div class="col-sm-2">
+                <a href="https://alecscripts.com/Python/main.html">
+                    Tags
+                </a>
+            </div>
+        </div>
         
-    </nav>
+    </div>
   </footer>
 </html>
