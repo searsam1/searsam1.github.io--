@@ -18,7 +18,7 @@
     <title>alecscripts - Classes</title>
     
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Alec Scripts</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -121,6 +121,33 @@ d = {"name" : "john smith"}
 print(d["name"])
 # "john smith"
             </code></pre>
+            <p>
+                To loop over a dictionary the <code class="language-python">items()</code> method
+                must be used to gain access to the keys and values. 
+                By default, only the keys are available when iterating.
+                <code class="language-python">for k,v in d.items()</code>
+                is the norm, k and v being arbitrary names standing for
+                key and value.
+            </p>
+            <pre><code class="language-python">
+apartment_directory = {
+    "Manny" : 101,
+    "Carla" : 102,
+    "Boone" : 103
+}
+
+for k, v in apartment_directory.items():
+    print(f"Name: {k} | Apartment #{v}")    
+
+# Name: Manny | Apartment #101
+# Name: Carla | Apartment #102
+# Name: Boone | Apartment #103
+
+print(
+    apartment_directory["Manny"]
+)
+# 101
+            </code></pre>
         </div>        
     </div>
 
@@ -141,7 +168,7 @@ print(d["name"])
     <div class="p-3 navbar-expand-lg bg-dark text-light">
         <div class="row">
             <div class="col-sm-2">
-                <a href="https://alecscripts.com/Python/main.html">
+                <a  href="https://alecscripts.com/Python/main.html">
                     alecscripts.com
                 </a>
             </div>
@@ -150,7 +177,13 @@ print(d["name"])
                     About Me
                 </a>
             </div>
+            <div class="col-sm-2">
+                <span>
+                    bootstrap@4.3.1
+                </span>
+            </div>
         </div>
+        
         
         <div class="row">
             <div class="col-sm-2">
@@ -159,7 +192,7 @@ print(d["name"])
                 </a>
             </div>
             <div class="col-sm-2">
-                <a href="https://alecscripts.com/Python/main.html">
+                <a class="disabled" href="#">
                     HTML
                 </a>
             </div>
@@ -167,12 +200,12 @@ print(d["name"])
 
         <div class="row">
             <div class="col-sm-2">
-                <a href="https://alecscripts.com/Python/main.html">
+                <a class="disabled" href="#">
                     Functions
                 </a>
             </div>
             <div class="col-sm-2">
-                <a href="https://alecscripts.com/Python/main.html">
+                <a class="disabled" href="#">
                     Tags
                 </a>
             </div>
