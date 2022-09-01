@@ -76,8 +76,6 @@ button {
   background: none;
   border: none;
   font-size: 20px;
-  margin: 10px;
-  border-bottom: 1px solid var(--aColor-red-dark);
   
 }
 
@@ -106,18 +104,26 @@ h3 {
   font-family: 'Lato', sans-serif;
   /* font-family: 'Silkscreen', cursive;  */
 }
-h3:not(.display-4)::before{
+/* h3:not(.display-4)::before{
   content: "+";
   margin-right: 10px;
+  
+} */
+.plus-btn{
+  display: none;
+}
+.minus-btn{
+  display: "inline";
 }
 
-
-button:hover {
+/* button:hover {
   background-color: rgb(0,0,0,.02);
   
-}
+} */
 
-button:focus {outline: none;}
+button:focus {
+  outline: none;
+}
 
 thead tr td{
   border: 1px solid black;

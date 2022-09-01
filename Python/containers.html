@@ -39,33 +39,40 @@
         <h3 class="display-4">
             Containers
         </h3>
+        
         <p class="indent">A container is an object that can hold other objects.
             Python has a vast collection of containers ranging from
             dictionaries to lists to tuples. 
         </p>
-        <h3>
-            Lists
-        </h3>
-        <p>
-            Lists are easy to work with in python
-            and come in handy often, especially with 
-            list comprehensions. Lists are created 
-            by using square brackets to encapsulate 
-            the list and commas to separate the items.
-            <pre><code class="language-python">
+        <div id="lists">
+        <button onclick="show('lists')">
+            <h3>
+                <span style="display: inline;" class="minus-btn" > - </span>
+                <span style="display: none;" class="plus-btn" > + </span>
+                Lists
+            </h3>
+        </button>
+        <div class="sector">
+            <p>
+                Lists are easy to work with in python
+                and come in handy often, especially with 
+                list comprehensions. Lists are created 
+                by using square brackets to encapsulate 
+                the list and commas to separate the items.
+                <pre><code class="language-python">
 lst = [1, 2, 3, 4]
 lst2 = ["strings"]
 lst3 = [["another list"], lst, lst2]
-            </code></pre>
-        </p>
-        <p>
-            Elements are located by index also using square brackets. They always
-            start at zero at go to the length of the list 
-            - 1. The range function starts at zero and goes to 
-            the end parameter - 1, making it perfect for 
-            iteration and lists.
-        </p>
-        <pre><code class="language-python">
+                </code></pre>
+            </p>
+            <p>
+                Elements are located by index also using square brackets. They always
+                start at zero at go to the length of the list 
+                - 1. The range function starts at zero and goes to 
+                the end parameter - 1, making it perfect for 
+                iteration and lists.
+            </p>
+            <pre><code class="language-python">
 lst = ["a", "b", "c"]
 
 for i in range(len(lst)):
@@ -76,21 +83,69 @@ for i in range(len(lst)):
 
 # better to use enumerate(), but 
 # trying to keep it simple for this example
-        </code></pre>
-        <p>
-            Assigning a value to a list is easy as well. Reference 
-            the list and the index and set it equal to whatever 
-            value. <br><code>lst[0] = "1"</code>
-        </p>
-        <h3>
-            Dictionaries
-        </h3>
+            </code></pre>
+            <p>
+                Assigning a value to a list is easy as well. Reference 
+                the list and the index and set it equal to whatever 
+                value. <br><code>lst[0] = "1"</code>
+            </p>
+        </div>
+    </div>
         
+
+<div id="dictionaries">
+        <button onclick="show('dictionaries')">
+            <h3>
+                <span style="display: inline;" class="minus-btn" > - </span>
+                <span style="display: none;" class="plus-btn" > + </span>
+                Lists
+            </h3>
+        </button>
+        <div class="sector">
+            <p>
+                Lists are easy to work with in python
+                and come in handy often, especially with 
+                list comprehensions. Lists are created 
+                by using square brackets to encapsulate 
+                the list and commas to separate the items.
+                <pre><code class="language-python">
+lst = [1, 2, 3, 4]
+lst2 = ["strings"]
+lst3 = [["another list"], lst, lst2]
+                </code></pre>
+            </p>
+            <p>
+                Elements are located by index also using square brackets. They always
+                start at zero at go to the length of the list 
+                - 1. The range function starts at zero and goes to 
+                the end parameter - 1, making it perfect for 
+                iteration and lists.
+            </p>
+            <pre><code class="language-python">
+lst = ["a", "b", "c"]
+
+for i in range(len(lst)):
+    print(i, lst[i])
+# 0 "a"
+# 1 "b"
+# 2 "c"
+
+# better to use enumerate(), but 
+# trying to keep it simple for this example
+            </code></pre>
+            <p>
+                Assigning a value to a list is easy as well. Reference 
+                the list and the index and set it equal to whatever 
+                value. <br><code>lst[0] = "1"</code>
+            </p>
+        </div>
+    </div>        
         
     </div>
 
 
 
+    <script src="../mainJs.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

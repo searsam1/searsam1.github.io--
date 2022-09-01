@@ -1,6 +1,6 @@
 function show(id) {
 
-    const ele = document.getElementById(id);
+    const ele = document.getElementById(id).getElementsByClassName("sector")[0];
 
     if (ele.style.display == "none"){
         ele.style.display = "block";
@@ -9,13 +9,24 @@ function show(id) {
         ele.style.display = "none";
     }
 
-    const bolt = document.getElementById("light-bolt");
+    const plusBtn = document.getElementById(id).getElementsByClassName("plus-btn")[0]
 
-    if (bolt.style.color == "darkred"){
-        bolt.style.color = "black";    
-        
+    
+    if (plusBtn.style.display == "none"){
+        plusBtn.style.display = "inline";
     }
-    else {
-        bolt.style.color = "darkred";
+    else{
+        plusBtn.style.display = "none";
     }
+
+    const minusBtn = document.getElementById(id).getElementsByClassName("minus-btn")[0]
+
+    
+    if (minusBtn.style.display == "none"){
+        minusBtn.style.display = "inline";
+    }
+    else{
+        minusBtn.style.display = "none";
+    }
+
   }
