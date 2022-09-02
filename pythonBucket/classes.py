@@ -5,7 +5,7 @@
 
 #     def print_color(self):
 #         print(self.color)
-        
+
 #     def change_colors(crayon,color):
 #         crayon.color = color
 
@@ -18,10 +18,10 @@
 
 
 class Testing:
-    tests = 0 
-        
-    @classmethod        
-    def is_equal(cls,a,b):
+    tests = 0
+
+    @classmethod
+    def is_equal(cls, a, b):
         try:
             assert a == b
             cls.tests += 1
@@ -29,15 +29,16 @@ class Testing:
         except AssertionError:
             print(f"{a}\n  should = \n{b}")
 
+
 t = Testing()
-t.is_equal(3,3)
-t.is_equal(3,44)
-t.is_equal(2,2)
-t.is_equal(1,1)
+t.is_equal(3, 3)
+t.is_equal(3, 44)
+t.is_equal(2, 2)
+t.is_equal(1, 1)
 
 # tests passed: 1
 # 3
-#   should = 
+#   should =
 # 44
 # tests passed: 2
 # tests passed: 3
