@@ -171,7 +171,7 @@ print(
                 and the values are separated by commas.
             </p>
             <pre><code class="language-python">
-tup = [1, 2, 3]
+tup = (1, 2, 3)
 tup[0] = 2
 """
 Traceback (most recent call last):
@@ -179,6 +179,15 @@ Traceback (most recent call last):
 TypeError: 'tuple' object does not support item assignment
 """
             </code></pre>
+
+            <p>
+                To make changes to a tuple, create a copy
+                of that tuple with them. It is probably 
+                better to use a list at that point, but it 
+                is possible. They can still be iterated over 
+                and have some of the same uses as lists.
+            </p>
+
         </div>        
     </div>    
 

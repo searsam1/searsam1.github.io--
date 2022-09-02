@@ -120,6 +120,12 @@ h3 {
   
 } */
 
+/* https://stackoverflow.com/questions/1027354/i-need-an-unordered-list-without-any-bullets/1027367#1027367 */
+ul li {
+  list-style-type: "⚛︎  ";
+}
+
+
 h3:not(.display-4):hover{
   background-color: rgb(0,0,0,.02);
   padding: 3px;
