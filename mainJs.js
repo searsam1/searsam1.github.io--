@@ -33,7 +33,11 @@ function show(id) {
     displayElement(sector, "block")
     displayElement(plusBtn, "none", "inline")
     displayElement(minusBtn, "inline")
-    console.log(h3);
-    changeColor(h3, "black", "darkblue");
 
   }
+
+
+function clickMe(){
+    alert("I was clicked")
+}
+
