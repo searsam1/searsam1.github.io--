@@ -32,7 +32,7 @@ p.indent {
 }
 
 body{
-  background-color: rgb(255,255,1,.1);
+  background-color: white;
   font-size: 16px;
 }
 pre{
@@ -120,10 +120,7 @@ h3 {
   
 } */
 
-/* https://stackoverflow.com/questions/1027354/i-need-an-unordered-list-without-any-bullets/1027367#1027367 */
-ul li {
-  list-style-type: "⚛︎  ";
-}
+
 
 
 h3:not(.display-4):hover{
