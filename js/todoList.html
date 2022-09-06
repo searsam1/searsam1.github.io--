@@ -19,7 +19,7 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <title>js - color flipper</title>
+    <title>js - Todo (To-do) list</title>
 
     <!-- <div class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark  shadow-sm">
@@ -77,92 +77,7 @@
 
 <body>
     <div class="container-no-animation">
-
-        <h3>
-            Color Flipper
-        </h3>
-
-        <h6>
-            JavaScript Project
-        </h6>
-
-        <p>
-            On button click, the
-            background color flips to a
-            random color.
-        </p>
-
-        <button class="p-3 btn btn-info mb-4">
-            Random Color
-        </button>
-
-        <div id="value" class="box text-center">
-            <span>rgb(255,0,0)</span>
-        </div>
-
-        <script>
-
-            // select value and buttons
-            const value = document.querySelector("#value");
-            const buttons = document.querySelectorAll(".btn");
-            const box = document.querySelector(".box");
-
-            function inverse(r, g, b) {
-                r -= 255; g -= 255; b -= 255;
-                r = Math.abs(r); g = Math.abs(g); b = Math.abs(b);
-                return `rgb(${r},${g},${b})`
-            }
-
-
-            buttons.forEach(function (btn) {
-                btn.addEventListener("click", function (e) {
-
-                    randomNumber1 = Math.floor(Math.random() * 255)
-                    randomNumber2 = Math.floor(Math.random() * 255)
-                    randomNumber3 = Math.floor(Math.random() * 255)
-                    randomColor = `rgb(${randomNumber1},${randomNumber2},${randomNumber3})`;
-                    randomColor_r = inverse(randomNumber1, randomNumber2, randomNumber3);
-                    value.style.color = randomColor;
-                    value.textContent = randomColor_r;
-                    box.style.background = randomColor_r;
-
-
-                });
-            });
-
-
-        </script>
-
-<pre><code class="language-js">
-// select value and buttons
-const value = document.querySelector("#value");
-const buttons = document.querySelectorAll(".btn");
-const box = document.querySelector(".box");
-
-function inverse(r, g, b) {
-    r -= 255; g -= 255; b -= 255;
-    r = Math.abs(r); g = Math.abs(g); b = Math.abs(b);
-    return `rgb(${r},${g},${b})`
-}
-
-
-buttons.forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-
-        randomNumber1 = Math.floor(Math.random() * 255)
-        randomNumber2 = Math.floor(Math.random() * 255)
-        randomNumber3 = Math.floor(Math.random() * 255)
-        randomColor = `rgb(${randomNumber1},${randomNumber2},${randomNumber3})`;
-        randomColor_r = inverse(randomNumber1, randomNumber2, randomNumber3);
-        value.style.color = randomColor;
-        value.textContent = randomColor_r;
-        box.style.background = randomColor_r;
-
-
-    });
-});        
-        </code></pre>
-
+        
     </div>
 
     <style>
