@@ -133,6 +133,35 @@
 
         </script>
 
+<pre><code class="language-js">
+// select value and buttons
+const value = document.querySelector("#value");
+const buttons = document.querySelectorAll(".btn");
+const box = document.querySelector(".box");
+
+function inverse(r, g, b) {
+    r -= 255; g -= 255; b -= 255;
+    r = Math.abs(r); g = Math.abs(g); b = Math.abs(b);
+    return `rgb(${r},${g},${b})`
+}
+
+
+buttons.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+
+        randomNumber1 = Math.floor(Math.random() * 255)
+        randomNumber2 = Math.floor(Math.random() * 255)
+        randomNumber3 = Math.floor(Math.random() * 255)
+        randomColor = `rgb(${randomNumber1},${randomNumber2},${randomNumber3})`;
+        randomColor_r = inverse(randomNumber1, randomNumber2, randomNumber3);
+        value.style.color = randomColor;
+        value.textContent = randomColor_r;
+        box.style.background = randomColor_r;
+
+
+    });
+});        
+        </code></pre>
 
     </div>
 
@@ -143,6 +172,8 @@
             border: 5px ridge black;
         }
     </style>
+
+    
 
 
     <div class="scripts">
