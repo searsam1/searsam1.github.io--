@@ -79,7 +79,7 @@
     <div class="container-no-animation">
 
         <h3>
-            Counter
+            Color Flipper
         </h3>
 
         <h6>
@@ -87,101 +87,46 @@
         </h6>
 
         <p>
-            Make a simple counter that
-            can count <span class="green">up</span>, <span class="red">down</span> and reset
-            to zero.
+            On button click, the
+            background color flips to a
+            random color.
         </p>
 
+        <button class="p-3 btn btn-info mb-4">
+            Random Color
+        </button>
 
-
-        <style>
-            .decrease {
-                background-color: red;
-            }
-
-            .increase {
-                background-color: greenyellow;
-            }
-
-            .reset {
-                background-color: yellow;
-            }
-
-            .btn {
-                padding: 15px;
-                margin-top: 15px;
-                box-shadow: 1px 1px 1px 1px rgb(1, 1, 1, .2);
-            }
-
-            #value {
-                font-size: 40px;
-                padding: 10px;
-                box-shadow: 1px 1px 1px 1px rgb(1, 1, 1, .2);
-            }
-
-            .green {
-                color: green;
-            }
-
-            .red {
-                color: red;
-            }
-        </style>
-
-
-        <div class="text-center">
-            <span id="value">0</span>
-            <div class="btn-container">
-                <button class="btn decrease">Decrease</button>
-                <button class="btn reset">Reset</button>
-                <button class="btn increase">Increase</button>
-            </div>
+        <div id="value" class="box text-center">
+            <span>rgb(255,0,0)</span>
         </div>
-
-        <pre><code class="language-js">
-// set initial count
-let count = 0;
-
-// select value and buttons
-const value = document.querySelector("#value")
-const buttons = document.querySelectorAll(".btn")
-
-buttons.forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-        const styles = e.currentTarget.classList;
-        let inc = styles.contains('decrease') ? 
-            -1 : styles.contains('increase') 
-                ? 1 : -count;
-        count += inc;                    
-        value.textContent = count;
-        let color = count < 0 ? 'red' : 
-            count > 0 ? 'green' : 'black';
-        value.style.color = color;
-    });
-});
-        </code></pre>
-
-
 
         <script>
 
-            // set initial count
-            let count = 0;
-
             // select value and buttons
-            const value = document.querySelector("#value")
-            const buttons = document.querySelectorAll(".btn")
+            const value = document.querySelector("#value");
+            const buttons = document.querySelectorAll(".btn");
+            const box = document.querySelector(".box");
+
+            function inverse(r, g, b) {
+                r -= 255; g -= 255; b -= 255;
+                r = Math.abs(r); g = Math.abs(g); b = Math.abs(b);
+                return `rgb(${r},${g},${b})`
+            }
+
 
             buttons.forEach(function (btn) {
                 btn.addEventListener("click", function (e) {
-                    const styles = e.currentTarget.classList;
-                    let inc = styles.contains('decrease') ?
-                        -1 : styles.contains('increase')
-                            ? 1 : -count;
-                    count += inc;
-                    value.textContent = count;
-                    let color = count < 0 ? 'red' : count > 0 ? 'green' : 'black';
-                    value.style.color = color;
+
+                    randomNumber1 = Math.floor(Math.random() * 255)
+                    randomNumber2 = Math.floor(Math.random() * 255)
+                    randomNumber3 = Math.floor(Math.random() * 255)
+                    randomColor = `rgb(${randomNumber1},${randomNumber2},${randomNumber3})`;
+                    randomColor_r = inverse(randomNumber1, randomNumber2, randomNumber3);
+                    value.style.color = randomColor;
+                    value.textContent = randomColor_r;
+                    box.style.background = randomColor_r;
+
+
                 });
             });
 
@@ -189,8 +134,16 @@ buttons.forEach(function (btn) {
         </script>
 
 
-
     </div>
+
+    <style>
+        .box {
+            padding: 100px;
+            background: red;
+            border: 5px ridge black;
+        }
+    </style>
+
 
     <div class="scripts">
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
