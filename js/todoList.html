@@ -111,6 +111,35 @@
                 </div>
             </ul>
         </div>
+        
+        <pre><code class="language-js">
+function strike(ele){    
+        ele.style.textDecoration = "overline";
+    }
+function crossOut() {
+    btns = document.getElementsByClassName('btn');
+    for (btn of btns){
+        btn.addEventListener("click", function (e){
+            target = e.currentTarget
+            target.style.color = "rgb(1,1,1,.5)";
+            target.style.textDecoration = "line-through";
+        });
+        span = document.createElement('span')
+        span.textContent = "\u00D7"
+        span.textDecoration = "none";
+        span.className = "close";
+        li = btn.querySelector('li');
+        span.addEventListener('click', function (e){
+            target = e.currentTarget
+            t = this.parentElement;
+            t.style.display = "none";       
+        });
+        li.appendChild(span)
+    }
+}
+crossOut();            
+        </code></pre>
+
     </div>
 
     <style>
