@@ -12,6 +12,24 @@
   }
 }
 
+.todoBox ul{
+  list-style-type: none;
+  background-color: rgb(0,0,0,.034);
+}
+.todoBox ul li{
+  padding: 10px;
+  
+}
+
+.todoBox ul li span{
+  padding-left: 10px;
+  color: black;
+  text-decoration: none;
+}
+.todoBox ul li span:hover{
+  color: darkred;
+}
+
 .container-no-animation
 {
   margin-top: 20px;

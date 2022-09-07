@@ -77,7 +77,40 @@
 
 <body>
     <div class="container-no-animation">
+        <h3>
+           Todo List 
+        </h3>
+        <p>
+            Create a form that can act as a quick todo maker.
+        </p>
         
+        <div class="todoBox">
+            <ul id="list">
+                <div>
+                    <button class="btn">
+                        <li>
+                            walk 
+                        </li>
+                    </button>
+                </div>
+                
+                <div>
+                    <button class="btn">
+                        <li>
+                            Walk the dogs
+                        </li>
+                    </button>
+                </div>
+
+                <div>
+                    <button class="btn">
+                        <li>
+                            uuu
+                        </li>
+                    </button>
+                </div>
+            </ul>
+        </div>
     </div>
 
     <style>
@@ -88,6 +121,43 @@
             font-family: 'Courier New', Courier, monospace  ;
         }
     </style>
+
+    <script>
+
+        function strike(ele){
+            
+            ele.style.textDecoration = "overline";
+        }
+
+        function crossOut() {
+            
+            btns = document.getElementsByClassName('btn');
+            
+            for (btn of btns){
+                btn.addEventListener("click", function (e){
+                    target = e.currentTarget
+                    target.style.color = "rgb(1,1,1,.5)";
+                    target.style.textDecoration = "line-through";
+                });
+                span = document.createElement('span')
+                span.textContent = "\u00D7"
+                span.textDecoration = "none";
+                span.className = "close";
+                
+
+                li = btn.querySelector('li');
+                span.addEventListener('click', function (e){
+                    target = e.currentTarget
+                    t = this.parentElement;
+                    t.style.display = "none";
+                    
+                });
+                li.appendChild(span)
+            }
+
+        }
+        crossOut();
+    </script>
 
     
 
