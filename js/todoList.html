@@ -83,6 +83,11 @@
         <p>
             Create a form that can act as a quick todo maker.
         </p>
+
+        <input type="text" id="inputValue" placeholder="Task">
+        <button class="submit btn-secondary">
+            <span style="font-size: 15px;">Add Task</span>
+        </button>
         
         <div class="todoBox">
             <ul id="list">
@@ -112,7 +117,12 @@
             </ul>
         </div>
         
-        <pre><code class="language-js">
+
+        <div id="js-code">
+            <button class="btn-info" onclick="show('js-code')">
+                Source Code
+            </button>
+<pre style="display: none;" class="sector"><code class="language-js">
 function strike(ele){    
         ele.style.textDecoration = "overline";
     }
@@ -139,6 +149,7 @@ function crossOut() {
 }
 crossOut();            
         </code></pre>
+        </div>
 
     </div>
 
@@ -177,15 +188,68 @@ crossOut();
                 li = btn.querySelector('li');
                 span.addEventListener('click', function (e){
                     target = e.currentTarget
-                    t = this.parentElement;
-                    t.style.display = "none";
+                    t = this.parentElement.parentElement.parentElement;
+                    t.remove();
                     
                 });
                 li.appendChild(span)
             }
 
         }
+        
         crossOut();
+        list = document.getElementById('list');
+        
+                
+                
+                    submit = document.querySelector(".submit");
+            submit.addEventListener("click", function (e){
+                input = document.getElementById('inputValue').value;        
+                if (!input){
+                    alert("Must Enter a Value")
+                }
+                else{
+                    li = document.createElement("LI")
+                div = document.createElement("DIV")
+                button = document.createElement("BUTTON")
+
+                li.textContent = input;
+                button.appendChild(li);
+                button.className = "btn"
+                div.appendChild(button);
+
+                list.appendChild(div);
+
+                span = document.createElement('span')
+                span.textContent = "\u00D7"
+                span.textDecoration = "none";
+                span.className = "close";
+
+                span.addEventListener('click', function (e){
+                    target = e.currentTarget
+                    t = this.parentElement.parentElement.parentElement;
+                    t.remove();
+                
+                    })
+                
+                button.addEventListener("click", function (e){
+                    target = e.currentTarget
+                    target.style.color = "rgb(1,1,1,.5)";
+                    target.style.textDecoration = "line-through";
+                
+                });
+                li.append(span)
+                
+                }
+                
+                
+            });
+                
+            
+            
+        
+            
+        
     </script>
 
     
