@@ -91,29 +91,15 @@
         
         <div class="todoBox">
             <ul id="list">
-                <div>
+                <!-- <div>
                     <button class="btn">
                         <li>
-                            walk 
+                            Task 
                         </li>
                     </button>
-                </div>
+                </div> -->
                 
-                <div>
-                    <button class="btn">
-                        <li>
-                            Walk the dogs
-                        </li>
-                    </button>
-                </div>
-
-                <div>
-                    <button class="btn">
-                        <li>
-                            uuu
-                        </li>
-                    </button>
-                </div>
+                
             </ul>
         </div>
         
@@ -123,48 +109,7 @@
                 Source Code
             </button>
 <pre style="display: none;" class="sector"><code class="language-js">
-function strike(ele){    
-        ele.style.textDecoration = "overline";
-    }
-function crossOut() {
-    btns = document.getElementsByClassName('btn');
-    for (btn of btns){
-        btn.addEventListener("click", function (e){
-            target = e.currentTarget
-            target.style.color = "rgb(1,1,1,.5)";
-            target.style.textDecoration = "line-through";
-        });
-        span = document.createElement('span')
-        span.textContent = "\u00D7"
-        span.textDecoration = "none";
-        span.className = "close";
-        li = btn.querySelector('li');
-        span.addEventListener('click', function (e){
-            target = e.currentTarget
-            t = this.parentElement;
-            t.style.display = "none";       
-        });
-        li.appendChild(span)
-    }
-}
-crossOut();            
-        </code></pre>
-        </div>
-
-    </div>
-
-    <style>
-        .box {
-            padding: 100px;
-            background: red;
-            border: 5px ridge black;
-            font-family: 'Courier New', Courier, monospace  ;
-        }
-    </style>
-
-    <script>
-
-        function strike(ele){
+function strike(ele){
             
             ele.style.textDecoration = "overline";
         }
@@ -177,7 +122,8 @@ crossOut();
                 btn.addEventListener("click", function (e){
                     target = e.currentTarget
                     target.style.color = "rgb(1,1,1,.5)";
-                    target.style.textDecoration = "line-through";
+
+                    target.parentElement.style.background = "greenyellow";
                 });
                 span = document.createElement('span')
                 span.textContent = "\u00D7"
@@ -235,21 +181,104 @@ crossOut();
                 button.addEventListener("click", function (e){
                     target = e.currentTarget
                     target.style.color = "rgb(1,1,1,.5)";
-                    target.style.textDecoration = "line-through";
-                
+                    target.parentElement.style.background = "greenyellow";
                 });
                 li.append(span)
-                
                 }
+            });            
+        </code></pre>
+        </div>
+
+    </div>
+
+    <style>
+        .box {
+            padding: 100px;
+            background: red;
+            border: 5px ridge black;
+            font-family: 'Courier New', Courier, monospace  ;
+        }
+    </style>
+
+    <script>
+
+        function strike(ele){
+            
+            ele.style.textDecoration = "overline";
+        }
+
+        function crossOut() {
+            
+            btns = document.getElementsByClassName('btn');
+            
+            for (btn of btns){
+                btn.addEventListener("click", function (e){
+                    target = e.currentTarget
+                    target.style.color = "rgb(1,1,1,.5)";
+
+                    target.parentElement.style.background = "greenyellow";
+                });
+                span = document.createElement('span')
+                span.textContent = "\u00D7"
+                span.textDecoration = "none";
+                span.className = "close";
+                
+
+                li = btn.querySelector('li');
+                span.addEventListener('click', function (e){
+                    target = e.currentTarget
+                    t = this.parentElement.parentElement.parentElement;
+                    t.remove();
+                    
+                });
+                li.appendChild(span)
+            }
+
+        }
+        
+        crossOut();
+        list = document.getElementById('list');
+        
                 
                 
+                    submit = document.querySelector(".submit");
+            submit.addEventListener("click", function (e){
+                input = document.getElementById('inputValue').value;        
+                if (!input){
+                    alert("Must Enter a Value")
+                }
+                else{
+                    li = document.createElement("LI")
+                div = document.createElement("DIV")
+                button = document.createElement("BUTTON")
+
+                li.textContent = input;
+                button.appendChild(li);
+                button.className = "btn"
+                div.appendChild(button);
+
+                list.appendChild(div);
+
+                span = document.createElement('span')
+                span.textContent = "\u00D7"
+                span.textDecoration = "none";
+                span.className = "close";
+
+                span.addEventListener('click', function (e){
+                    target = e.currentTarget
+                    t = this.parentElement.parentElement.parentElement;
+                    t.remove();
+                
+                    })
+                
+                button.addEventListener("click", function (e){
+                    target = e.currentTarget
+                    target.style.color = "rgb(1,1,1,.5)";
+                    target.parentElement.style.background = "greenyellow";
+                });
+                li.append(span)
+                }
             });
-                
-            
-            
-        
-            
-        
     </script>
 
     
