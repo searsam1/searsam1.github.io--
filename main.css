@@ -41,7 +41,45 @@
 p.indent {
   text-indent: 30px;
 }
-
+.toc{
+  background-color: rgb(1,1,1,.02);
+  list-style-type: lower-greek;
+  
+}
+.toc li{
+  margin: 10px;
+  padding: 5px;
+}
+.toc li::before{
+  color: black;
+}
+.toc li:hover{
+  padding: 10px;
+}
+.toc li:hover::before{
+  color: blue;
+}
+.toc li a {
+  color: black;
+  font-size: 16px;
+  padding: 10px;
+  
+}
+.toc li a:hover {
+  text-decoration: none;
+}
+.header::after{
+  content: "§";
+  margin-left: 10px;
+  font-size: 20px;
+}
+.header{
+  background: rgb(1,1,1,.02);
+}
+.header::before{
+  margin-left: 10px;
+  font-size: 20px;
+}
 
 *{
   scroll-padding-top: 70px;

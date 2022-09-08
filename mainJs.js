@@ -30,3 +30,33 @@ function clickMe(){
     alert("I was clicked")
 }
 
+function createTocLink(e, id_){
+    var li = document.createElement("li");
+    var a = document.createElement("a");
+    var href = document.createAttribute("href")
+    href.value = `#${id_}`
+    a.setAttributeNode(href)
+    a.textContent = e.textContent.trim(" ")
+    li.appendChild(a)
+
+    return li;
+    
+
+}
+
+function createTOC(){
+    headers = document.getElementsByClassName("header")
+    toc = document.querySelector(".toc")
+    console.log(toc)
+
+    var i = 0;
+    for (header of headers){
+        var att = document.createAttribute("id")
+        att.value = i;
+        i++;
+        header.setAttributeNode(att)
+        
+        toc.appendChild(createTocLink(header, att.value))
+            
+    }
+}
