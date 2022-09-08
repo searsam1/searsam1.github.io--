@@ -84,7 +84,25 @@
             Create a form that can act as a quick todo maker.
         </p>
 
-        <input type="text" id="inputValue" placeholder="Task">
+        
+        <input style="font-size: 15px;" type="text" id="inputValue" placeholder="Task">
+        
+        <script>
+            // Get the input field
+var input = document.getElementById("inputValue");
+
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.querySelector(".submit").click();
+  }
+});
+        </script>
+        
         <button class="submit btn-secondary">
             <span style="font-size: 15px;">Add Task</span>
         </button>
@@ -105,7 +123,7 @@
         
 
         <div id="js-code">
-            <button class="btn-info" onclick="show('js-code')">
+            <button style="margin : 10px; font-size:13px;" class="btn-info" onclick="show('js-code')">
                 Source Code
             </button>
 <pre style="display: none;" class="sector"><code class="language-js">
@@ -191,6 +209,7 @@ function strike(ele){
 
     </div>
 
+
     <style>
         .box {
             padding: 100px;
@@ -198,50 +217,15 @@ function strike(ele){
             border: 5px ridge black;
             font-family: 'Courier New', Courier, monospace  ;
         }
+        body{
+            border-top: 10px solid rgb(1,1,1,.2);
+            border-bottom: 10px solid rgb(1,1,1,.5);
+        }
     </style>
 
     <script>
-
-        function strike(ele){
-            
-            ele.style.textDecoration = "overline";
-        }
-
-        function crossOut() {
-            
-            btns = document.getElementsByClassName('btn');
-            
-            for (btn of btns){
-                btn.addEventListener("click", function (e){
-                    target = e.currentTarget
-                    target.style.color = "rgb(1,1,1,.5)";
-
-                    target.parentElement.style.background = "greenyellow";
-                });
-                span = document.createElement('span')
-                span.textContent = "\u00D7"
-                span.textDecoration = "none";
-                span.className = "close";
-                
-
-                li = btn.querySelector('li');
-                span.addEventListener('click', function (e){
-                    target = e.currentTarget
-                    t = this.parentElement.parentElement.parentElement;
-                    t.remove();
-                    
-                });
-                li.appendChild(span)
-            }
-
-        }
-        
-        crossOut();
-        list = document.getElementById('list');
-        
-                
-                
-                    submit = document.querySelector(".submit");
+        list = document.getElementById('list');    
+            submit = document.querySelector(".submit");
             submit.addEventListener("click", function (e){
                 input = document.getElementById('inputValue').value;        
                 if (!input){
@@ -273,8 +257,14 @@ function strike(ele){
                 
                 button.addEventListener("click", function (e){
                     target = e.currentTarget
-                    target.style.color = "rgb(1,1,1,.5)";
-                    target.parentElement.style.background = "greenyellow";
+                    var textColor = target.style.color;
+                    var bgColor = target.parentElement.style.background;
+                    bgColor = bgColor === "greenyellow" ? "none" : "greenyellow";
+                    target.parentElement.style.background = bgColor;
+
+                    target.style.color = bgColor === "greenyellow" ? "grey" : "black";
+
+
                 });
                 li.append(span)
                 }
