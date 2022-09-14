@@ -19,7 +19,7 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <title>Blackjack</title>
+    <title>Python - Double Palindromes</title>
 
     <!-- <div class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark  shadow-sm">
@@ -74,167 +74,81 @@
         </nav>
     </div> -->
 </head>
-
 <body>
     <div class="container-no-animation">
         <h3 class="display-4">
-            Blackjack Using Python
+            Python Double Palindromes
         </h3>
-
-
         <div>
             <ul class="toc">
                 <!-- table of contents goes here -->
             </ul>
         </div>
-
         <p>
             <h3 class="header">
-                Source Code    
+                What is a palindrome?
             </h3>
-
             <p>
-                <pre><code class="language-python">
-
-import random
-face_cards = "jack", "queen", "king"
-
-class Blackjack:
-    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, "jack", "queen", "king"]
-    deck = cards * 24
-
-    def __init__(self,bet) -> None:
-        self.deck, self.cards = Blackjack.deck.copy(), Blackjack.cards.copy()
-        random.shuffle(self.deck)
-        self.player_cards, self.dealer_cards = [], []
-        self.player_total, self.dealer_total = 0,0
-        self.bet = bet
-
-    def pop_card(self):
-        rand_idx = random.randint(0,len(self.deck) - 1)
-        card = self.deck.pop(rand_idx)
-        return card
-
-    def card_sum(self,cards):
-        return [10 if i in face_cards else i 
-                    for i in cards]
-
-    def update_total(self):
-        player_cards = self.card_sum(self.player_cards)
-        dealer_cards = self.card_sum(self.dealer_cards)
-        self.player_total = sum(player_cards)
-        self.dealer_total = sum(dealer_cards)        
-
-    def check_natural(self):
-        self.update_total()
-        if self.player_total == 21 and self.dealer_total == 21:
-            # Tie
-            pass
-        elif self.player_total == 21:
-            # player natural 
-            self.bet *= 1.5            
-
-    def hit(self):
-        card = self.pop_card()
-        self.player_cards.append(card)
-        self.update_total()
-        print(f"new card: {card}")
-        
-    def dealer_hit(self):
-        card = self.pop_card()
-        self.dealer_cards.append(card)
-        self.update_total()
-        print(f"new card: {card}")
-        print(f"Dealer: {self.dealer_cards}")
-
-    def deal_cards(self) -> None:
-        self.player_cards = [self.pop_card(), self.pop_card()]
-        self.dealer_cards = [self.pop_card(), self.pop_card()]
-        self.check_natural()
-        print(f"Player: {self.player_cards}, {self.player_total}")
-        print(f"Dealer: {self.dealer_cards[0]}")
-
-def play_blackjack(bet=100):
-    game = Blackjack(bet)
-    game.deal_cards()
-            
-    if game.dealer_total != 21:
-        while game.player_total < 21:
-            choice = input("h/s: ")
-            if choice == "h":
-                game.hit()
-                if game.player_total > 21:
-                    game.player_cards = [1 if i == 11 else i for i in game.player_cards]
-                    game.update_total()
-            else:
-                break
-    if game.player_total != 21 and game.player_total < 21:    
-        while game.dealer_total < 17:
-                game.update_total()
-                game.dealer_hit()
-                if game.dealer_total > 21:
-                    game.dealer_cards = [1 if i == 11 else i for i in game.dealer_cards]
-            
-
-    
-    return game.player_total, game.dealer_total, game.bet
-    
-def winner(args):
-    player, dealer = args[0], args[1]
-    bet = args[2]
-    print(f"Player Score: {player}\nDealer Score: {dealer}")
-    if player == 21:
-        if dealer == 21:
-            print("Tie - No Winner")
-            return 0
-        print("Player Blackjack")
-        return bet
-    elif dealer == 21:
-        print("Dealer Blackjack")
-        return -bet
-    elif player > 21:
-        print("Dealer Wins")
-        return -bet
-    elif dealer > 21:
-        print("Player Wins")
-        return bet
-    if abs(21 - player) > abs(21 - dealer):
-        print("Dealer Wins")
-        return -bet
-    print("Player Wins")
-    return bet
-
-chips = 200
-
-while True:
-    chips += winner(play_blackjack(chips)) // 2
-    print(chips)
-    print("--New game--")
-
-
-play_blackjack()
-"""
-Player: [11, 2], 13
-Dealer: 9
-h/s: h
-new card: 4
-h/s: s
-----
-----
-Dealer: [9, 11]
-20
-player: [11, 2, 4]
-17
-"""
-                </code></pre>
+                Palindromes are words that stay the same when they are reversed.
+            </p>
+            <p>
+                <p>
+                Ex. otto, bob
+                </p>
+            </p>
+            <p>
+                A <b>double</b> palindrome is where there are numbers 
+                and letters in the string. Separate the two and if 
+                they are both palindromes it is a double. If it is 
+                one or the other it is a normal palindrome.
+            </p>
+            <p>
+                Ex. cb77c, ccc888
+            </p>
+            <p>
+                <code class="language-python">cb77c = cbc, 77</code>
             </p>
         </p>
-        
+        <p>
+            <h3 class="header">
+                Check Palindrome in python
+            </h3>
+            <p>
+<pre><code class="language-python">
+def check_pal(s):
+    return s[::-1] == s
 
-
+def palindrome_set(lst):
+    scores = []
+    for word in lst:
+        chars = "".join(i for i in word if i.isalpha())
+        nums = "".join(i for i in word if i.isnumeric())
+        score = check_pal(nums) + check_pal(chars)
+        scores.append(score)
+    return scores</code></pre>
+            </p>
+        </p>
+        <p>
+            <h3 class="header">
+                Tests
+            </h3>
+            <p>
+                <a title="https://edabit.com/challenge/kjQGrpw9gfhMhPMF4" class="btn btn-outline-success" href="https://edabit.com/challenge/kjQGrpw9gfhMhPMF4">
+                    edabit.com
+                </a>
+<pre><code class="language-python">
+Test.assert_equals(palindrome_set(["cb77c", "ccc888", "ccc789", "abc89"]), [2, 2, 1, 0])
+Test.assert_equals(palindrome_set(["18a99b89cc881ba", "p7o8p987", "p7o", "p7o8"]), [1, 2, 1, 0])
+Test.assert_equals(palindrome_set(["ab9a", "abba", "aa78bb8bbaa7", "a88a"]), [2, 1, 2, 2])
+Test.assert_equals(palindrome_set(["789", "555", "ccc", "abba"]), [0, 1, 1, 1])
+Test.assert_equals(palindrome_set(["7a", "5f", "6c"]), [2, 2, 2])
+Test.assert_equals(palindrome_set(["7ab", "5fc", "6cd"]), [1, 1, 1])
+Test.assert_equals(palindrome_set(["87ab", "15fc", "26cd"]), [0, 0, 0])
+Test.assert_equals(palindrome_set(["1234ab", "144a441"]), [0, 2])
+Test.assert_equals(palindrome_set([""]), [0])</code></pre>
+            </p>
+        </p>
     </div>
-
-
     <div class="scripts">
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -253,8 +167,6 @@ player: [11, 2, 4]
         <script>createTOC();</script>
     </div>
 </body>
-
-
 <!-- <footer class=" bg-dark ">
     <div class="nav-link">
         <a href="https://alecscripts.com">
@@ -267,5 +179,4 @@ player: [11, 2, 4]
         </a>
     </div>
 </footer> -->
-
 </html>
