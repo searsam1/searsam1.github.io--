@@ -16,6 +16,10 @@
 
 </head>
 <style>
+    img {
+        border-radius: 20px;
+        margin: 10px;
+    }
     body {
         background-color: black;
         color: limegreen;
@@ -31,14 +35,20 @@
     }
     h2 {
         color: gold;
+        margin-top: 50px;
+        
     }
+    img {
+        max-width: 90vw;
+    }
+    
     h1 {
         
         /* font-family: 'Orbitron', sans-serif; */
         font-family: 'Rubik Vinyl', cursive;
         font-size: 50px;
         text-align: center;
-        margin-top: 50px;
+        
         /* font-family: 'Limelight', cursive; */
         /* font-family: 'IBM Plex Sans', sans-serif; */
 
@@ -65,7 +75,7 @@
         50% {color: lime;}
         100% {color: gold;}
     }
-    .bi{
+    .bi-radioactive{
         color: gold;
         animation: colorChange 5s infinite, spin 5s linear infinite;
         display: inline-block;
@@ -78,16 +88,42 @@
     </h1>
     <center>
         <p class="text-center">
-            Created by <span class="border-bottom border-warning">Alec Sears</span>
+            Created by <span class="border-bottom border-warning">Alec Sears</span> 
         </p>
     </center>
     <h2 class="text-center mt-3">
-        Fission
+        Fission <i class="bi bi-circle"></i> 
     </h2>
+    <center>
+        <a 
+            title="MikeRun, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" 
+            href="https://commons.wikimedia.org/wiki/File:Nuclear_fission_chain_reaction.svg">
+            <img 
+            width="512" 
+            alt="Nuclear fission chain reaction" 
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Nuclear_fission_chain_reaction.svg/512px-Nuclear_fission_chain_reaction.svg.png">
+        </a>
+    </center>
     <center>
         <p>
             Fission occurs when a neutron slams into a larger atom, forcing it to excite and split into two smaller atoms... - <a class="link-secondary" href="https://www.energy.gov/ne/articles/fission-and-fusion-what-difference">Office of Nuclear Energy</a>
         </p>
+    
+    <h2 > 
+        Nuclear reactors <i class="bi bi-circle"></i>
+    </h2>
+    <p>
+        Nuclear reactors are power sources that heat water 
+        to drive turbines that generate electricity. They undergo 
+        nuclear fission: the splitting of an atom. 
+    </p>
+    <p>
+        Water is also used as a moderator to activate the chain reaction 
+        needed to generate lots of controlled power. U-235 is hit with 
+        a neutron that is slowed down by water (hydrogen has a similar mass of a neutron), 
+        and that splits into fissile material and releases more energy.  
+    </p>
     </center>
+    
 </body>
 </html>
