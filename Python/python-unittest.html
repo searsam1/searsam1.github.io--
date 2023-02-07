@@ -90,10 +90,41 @@
 
         <p>
             <h3 class="header">
-                Source Code    
+                What is Unit Testing?
             </h3>
 
-           
+           <p>
+            Tests are fundamental is the software development process. They help one structure 
+            the way the program should behave and it acts as a template.
+           </p>
+           <p>
+            Take a password program, for example. A simple test to make 
+            sure there are no words in the password is easy with Unittest
+           </p>
+           <pre><code class="language-python">
+
+
+import os
+import string
+import unittest # TestCase
+
+class Test(unittest.TestCase):
+    def test_password_length(self, pw):
+        assert len(pw) > 10
+
+class Password:    
+    letters = string.ascii_letters
+    lowers = string.ascii_lowercase
+    uppers = string.ascii_uppercase
+    punc  = string.punctuation
+    key = os.urandom(32)
+
+p = Password()
+print(
+    p.key
+    )
+           </code></pre>
+
         </p>
         
 
