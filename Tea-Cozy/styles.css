@@ -1,0 +1,171 @@
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 22px;
+  color: seashell;
+  background-color: black;
+  opacity: .9;
+}
+
+.navbar {
+  max-height: 69px;
+  border-bottom: 1px solid seashell;
+  position: relative;
+}
+
+.nav-brand {
+  opacity: 50%;
+  
+}
+
+.inline {
+  display: inline;
+}
+
+.nav-items {
+  align-self: flex-end;
+  float: right;
+  padding-top: 20px;
+
+}
+
+.nav-item {
+  text-decoration: underline;
+  margin-right: 10px;
+}
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  padding-top: 10px;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.bg-dark {
+  background-color: black;
+  border-radius: 10px;
+
+}
+
+.bg-dark>p {
+  background-color: rgb(255, 255, 255, .1);
+
+}
+
+p {
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+.highlight {
+
+  border-bottom: 3px solid greenyellow;
+}
+
+.black-square {
+  width: 300px;
+  height: 300px;
+  background: black;
+  color: white;
+  display: inline-flex;
+  flex-direction: column;
+
+}
+
+.p-3 {
+  padding: 12px;
+}
+
+.black-square li {
+  font-size: 15px;
+  list-style: none;
+  border: 1px solid red;
+}
+
+.black-square h3 {
+  color: #e4be7c;
+}
+
+.bg-white {
+  color: black;
+  background-color: white;
+}
+
+@keyframes color-change {
+  0% { color: wheat; font-size: 1em; }
+  50% { color: white; font-size: .5em;}
+  100% { color: wheat; font-size:1em;}
+}
+
+@keyframes color-change_r {
+  0% { color: white; }
+  50% { color: wheat; }
+  100% { color: white; }
+}
+
+h1 {
+  font-size: 20px;
+}
+h1 span{
+  padding: 0px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid white;
+  font-family: 'Gloock', serif;
+}
+
+h1 span:nth-child(even) {
+  animation: color-change 2s linear 1;
+
+  
+}
+
+h1 span:nth-child(3n) {
+  animation: color-change 2s linear 1;
+}
+h1 span:nth-child(3n + 1) {
+  animation: color-change 2s linear 1;
+}
+h1 span:nth-child(5n + 1) {
+  animation: color-change_r 2s linear 1;
+}
